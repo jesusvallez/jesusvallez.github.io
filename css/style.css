@@ -30,7 +30,6 @@ h1 {
     margin-bottom: 8.5rem;
     font-weight: 800;
     color: white;
-    
   }
 }
 
@@ -38,12 +37,10 @@ h1 {
   height: 100%;
   width: 100%;
   background-size: cover;
-  background: transparent url("images/bg.jpeg") no-repeat top center fixed;
-
+  background: transparent url("https://jesusvallez.github.io/images/bg.jpg") no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-
 }
 
 .myimage, div::before
