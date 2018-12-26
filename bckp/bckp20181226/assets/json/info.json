@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Jesús Vállez",
-    "ocupation": "Fullstack developer",
+    "ocupation": "Desarrollador Full Stack",
     "photo": "assets/photo.jpg"
   },
   "privateInfo": [
@@ -34,7 +34,8 @@
         "far",
         "envelope"
       ],
-      "type": "text",
+      "type": "link",
+      "href": "mailto:jesusvg91@gmail.com",
       "text": "jesusvg91@gmail.com"
     },
     {
@@ -65,7 +66,7 @@
         ],
         "title": "Experiencia Profesional"
       },
-      "job": "Fullstack developer",
+      "job": "Angular developer",
       "date": "05/2018 – Presente",
       "company": "BQ. Las Rozas (Madrid), España",
       "page": "http://www.bmaker.es",
