@@ -144,54 +144,5 @@
         "<p>Proyecto Final de Carrera: Diseño, análisis, implementación y testeo de un servicio WEB REST destinado a la integración de información de un CRM. Desarrollo sobre la tecnología J2EE y anotaciones Java JAX-RS para una mejor implementación de los servicios WEB. Documentación de los servicios web mediante el framework Swagger UI.</p>"
       ]
     }
-  ],
-  "skills": {
-    "title": "Habilidades",
-    "icon": [
-      "far",
-      "lightbulb"
-    ],
-    "aptitudes": [
-      {
-        "id": 10,
-        "title": "Angular",
-        "counter": 66
-      },
-      {
-        "id": 9,
-        "title": "Node.js",
-        "counter": 80
-      },
-      {
-        "id": 8,
-        "title": "Vuejs 2",
-        "counter": 55
-      },
-      {
-        "id": 7,
-        "title": "PHP",
-        "counter": 98
-      },
-      {
-        "id": 3,
-        "title": "PHPUnit",
-        "counter": 80
-      },
-      {
-        "id": 6,
-        "title": "Docker",
-        "counter": 62
-      },
-      {
-        "id": 5,
-        "title": "Vagrant",
-        "counter": 58
-      },
-      {
-        "id": 2,
-        "title": "Java EE",
-        "counter": 78
-      }
-    ]
-  }
+  ]
 }
