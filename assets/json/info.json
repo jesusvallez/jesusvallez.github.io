@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Jesús Vállez",
-    "ocupation": "Fullstack developer",
+    "ocupation": "Angular Developer",
     "photo": "assets/photo.jpg"
   },
   "privateInfo": [
@@ -65,42 +65,41 @@
         ],
         "title": "Experiencia Profesional"
       },
-      "job": "Fullstack developer",
-      "date": "05/2018 – Presente",
+      "job": "Angular Developer",
+      "date": "05/2018 – 06/2019",
       "company": "BQ. Las Rozas (Madrid), España",
       "page": "http://www.bmaker.es",
       "details": [
-        "<p>Desarrollo de plataforma educativa orientada a centros de enseñanza y usuarios privados. Dicha herramienta está destinada al aprendizaje de la robótica y de su programación.</p>",
-        "<p>Todo esto está implementado con Angular como frontend framework y Node.js para backend ayudándose de una base de datos no relacional: mongo.</p>"
+        "<p>Desarrollo de plataforma educativa orientada a centros de enseñanza y usuarios privados. Dicha herramienta está destinada al aprendizaje de la robótica y de su programación. Todo esto desarrollado en Angular 7</p>"
       ]
     },
     {
-      "job": "Node.js developer",
-      "date": "02/2017 – Presente",
+      "job": "Node.js Developer",
+      "date": "02/2017 – 06/2019",
       "company": "Team Queso ESPORTS S.L.",
       "page": "https://www.teamqueso.com",
       "details": [
-        "<p>Desarrollo de bots para la administración de usuarios en la plataforma Discord. Estos bots son capaces de facilitar tareas al Staff y hacer un seguimiento de estos dentro de la misma. También son capaces de recoger estadísticas del juego Clash Royale y utilizarlos para ayudar en las partidas competitivas a los jugadores profesionales. Esta información será mostrada en una aplicación WEB basada en Angular 4.</p>"
+        "<p>Desarrollo de bots para la administración de usuarios en la plataforma Discord. Estos bots son capaces de facilitar tareas al Staff y hacer un seguimiento de estos dentro de la misma. También son capaces de recoger estadísticas del juego Clash Royale y utilizarlos para ayudar en las partidas competitivas a los jugadores profesionales. Toda esta información está plasmada en una aplicación WEB basada en Angular 4.</p>"
       ]
     },
     {
-      "job": "PHP Fullstack developer",
+      "job": "PHP developer",
       "date": "08/2017 – 04/2018",
       "company": "Lowpost S.L. Paterna (Valencia), España",
       "page": "https://www.lowpost.com",
       "details": [
-        "<p>Mantenimiento, desarrollo y testeo de una aplicación WEB basada en los Frameworks Drupal 7, Symfony 2.7 y AngularJS. Esta aplicación web se divide en dos grandes apartados: clientes y autores. El apartado de clientes está construido con AngularJS, ayudándose de una API pública (gracias a Symfony) y Drupal para el back-end. El apartado de autores, está implementado con drupal 7 y Symfony en su totalidad.</p>"
+        "<p>Aplicación WEB para crear marketing de contenidos, creando textos únicos y a medida Esta aplicación web se divide en dos grandes apartados: clientes y autores. El apartado de clientes está construido con AngularJS, ayudándose de una API pública hecha en Symfony 2 y Drupal para el backend. El apartado de autores, está implementado con Drupal 7 y Symfony en su totalidad.</p>"
       ]
     },
     {
-      "job": "PHP Fullstack developer",
+      "job": "PHP developer",
       "date": "12/2016 – 05/2017",
       "company": "PORIB Gestión eficiente de la Salud S.A. Paterna (Valencia), España",
       "page": "http://www.mediadd.es/",
       "details": [
         "<p>Durante el tiempo trabajado se han realizado diferentes proyectos:</p>",
-        "<ul><li>Desarrollo y mantenimiento de una aplicación WEB dentro del ámbito sanitario basada en el Framework Yii 1.1. Estas nuevas funcionalidades se basan en nuevos formularios dinámico o exportación de datos en la plataforma de reumatología.</li>",
-        "<li>Diseño, análisis, implementación y testeo de una aplicación WEB basadas en el Framework Yii 2.0 para la gestión de gastos internos de los empleados. Dicha aplicación registra los pagos mostrando al administrador estadísticas en forma de gráficas o exportación en XLS de los gastos de los empleados.</li></ul>"
+        "<ul><li>Aplicación WEB basada en formularios dinámico y exportación de datos. Todo esto basado en el Framework Yii 1.1.</li>",
+        "<li>Aplicación WEB que registra los gastos de los empleados mostrando al administrador estadísticas en forma de gráficas con la posibilidad de exportarlos en formato XLS. Aplicación basada en el Framework Yii 2.0.</li></ul>"
       ]
     },
     {
@@ -109,8 +108,8 @@
       "company": "Laboratorio Integrado de Sistemas Inteligentes y Tecnologías de la Información de Tráfico (IR – LISITT Universidad de Valencia). Burjassot (Valencia), España",
       "details": [
         "<p>Durante el tiempo trabajado se han realizado diferentes proyectos:</p>",
-        "<ul><li>Mantenimiento y desarrollo WEB de dos aplicaciones basadas en el Framework Yii 1.1. <a href=\"http://www.mediadd.es/\">http://www.mediadd.es/</a>. Estas aplicaciones están relacionadas con el ámbito sanitario, tales como Reumatología o VIH. Entre las distintas funcionalidades se encuentran la exportación de datos en formato XLS, consultas masivas y eficientes sobre pacientes y medicamentos, o monitorización del coste económico y evolutivo del paciente hacia el hospitales.</li>",
-        "<li>Implementación de un módulo CATI para E-NQUEST con la tecnología Asterisk. <a href=\"https://www.e-nquest.com\">https://www.e-nquest.com</a>. Desarrollo de un gestor de colas telefónicas en JAVA y configuración del servidor mediante scripts AGI. Implementación de una interfaz gráfica para la gestión de las llamadas.</li></ul>"
+        "<ul><li>Dos aplicaciones WEB relacionadas con el ámbito sanitario (Reumatología y VIH). Entre las distintas funcionalidades se encuentran las consultas masivas y eficientes sobre pacientes y medicamentos, o monitorización del coste económico y evolutivo del paciente hacia el hospitales además de la exportación de datos en formato XLS. Aplicaciones basadas en el Framework Yii 1.1.</li>",
+        "<li>Implementación de un módulo CATI para E-NQUEST con la tecnología Asterisk. Desarrollo de un gestor de colas telefónicas en JAVA y configuración del servidor mediante scripts AGI. Implementación de una interfaz gráfica para la gestión de las llamadas.</li></ul>"
       ]
     },
     {
@@ -132,7 +131,7 @@
     {
       "head": {
         "icon": [
-          "fa",
+          "fas",
           "graduation-cap"
         ],
         "title": "Formación Académica y Titulaciones"
@@ -141,7 +140,7 @@
       "date": "09/2009 - 01/2015",
       "company": "Universitat de València, Valencia",
       "details": [
-        "<p>Proyecto Final de Carrera: Diseño, análisis, implementación y testeo de un servicio WEB REST destinado a la integración de información de un CRM. Desarrollo sobre la tecnología J2EE y anotaciones Java JAX-RS para una mejor implementación de los servicios WEB. Documentación de los servicios web mediante el framework Swagger UI.</p>"
+        "<p>Proyecto Final de Carrera: servicio WEB REST destinado a la integración de información de un CRM. Desarrollada sobre la tecnología J2EE, anotaciones Java JAX-RS y Swagger UI para la documentación.</p>"
       ]
     }
   ]
