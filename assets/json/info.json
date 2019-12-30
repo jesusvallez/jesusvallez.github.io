@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Jesús Vállez",
-    "ocupation": "Angular Developer",
+    "ocupation": "Senior Frontend Developer",
     "photo": "assets/photo.jpg"
   },
   "privateInfo": [
@@ -65,12 +65,21 @@
         ],
         "title": "Experiencia Profesional"
       },
-      "job": "Angular Developer",
+      "job": "Senior Frontend Developer",
+      "date": "07/2019 – Presente",
+      "company": "Grupo MásMóvil. Alcobendas (Madrid), España",
+      "page": "https://www.grupomasmovil.com/",
+      "details": [
+        "<p>Desarrollo de <a href=\"https://www.yoigo.com\">https://www.yoigo.com</a>, donde se ofrece servicios de telefonía fija, telefonía móvil, internet y televisión en España. Dicha WEB está desarrollada en Angular 8.</p>"
+      ]
+    },
+    {
+      "job": "Frontend Developer",
       "date": "05/2018 – 06/2019",
       "company": "BQ. Las Rozas (Madrid), España",
       "page": "http://www.bmaker.es",
       "details": [
-        "<p>Desarrollo de plataforma educativa orientada a centros de enseñanza y usuarios privados. Dicha herramienta está destinada al aprendizaje de la robótica y de su programación. Todo esto desarrollado en Angular 7</p>"
+        "<p>Desarrollo de plataforma educativa orientada a centros de enseñanza y usuarios privados. Dicha herramienta está destinada al aprendizaje de la robótica y de su programación. Todo esto desarrollado en Angular 7.</p>"
       ]
     },
     {
