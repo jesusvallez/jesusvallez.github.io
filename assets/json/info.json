@@ -6,51 +6,33 @@
   },
   "privateInfo": [
     {
-      "icon": [
-        "fas",
-        "birthday-cake"
-      ],
+      "icon": ["fas", "birthday-cake"],
       "type": "text",
       "text": "24 de septiembre de 1991"
     },
     {
-      "icon": [
-        "fas",
-        "home"
-      ],
+      "icon": ["fas", "home"],
       "type": "text",
       "text": "Valencia, España"
     },
     {
-      "icon": [
-        "fas",
-        "plane"
-      ],
+      "icon": ["fas", "plane"],
       "type": "text",
       "text": "Madrid, España"
     },
     {
-      "icon": [
-        "far",
-        "envelope"
-      ],
+      "icon": ["far", "envelope"],
       "type": "text",
       "text": "jesusvg91@gmail.com"
     },
     {
-      "icon": [
-        "fab",
-        "linkedin-in"
-      ],
+      "icon": ["fab", "linkedin-in"],
       "type": "link",
       "href": "https://www.linkedin.com/in/jesusvallez",
       "text": "linkedin.com/in/jesusvallez"
     },
     {
-      "icon": [
-        "fab",
-        "github"
-      ],
+      "icon": ["fab", "github"],
       "type": "link",
       "href": "https://www.github.com/jesusvallez",
       "text": "github.com/jesusvallez"
@@ -59,18 +41,29 @@
   "publicInfo": [
     {
       "head": {
-        "icon": [
-          "fas",
-          "briefcase"
-        ],
+        "icon": ["fas", "briefcase"],
         "title": "Experiencia Profesional"
       },
       "job": "Senior Frontend Developer",
-      "date": "07/2019 – Presente",
+      "date": "10/2021 – Presente",
       "company": "Grupo MásMóvil. Alcobendas (Madrid), España",
       "page": "https://www.grupomasmovil.com/",
       "details": [
-        "<p>Desarrollo de <a href=\"https://www.yoigo.com\">https://www.yoigo.com</a>, donde se ofrece servicios de telefonía fija, telefonía móvil, internet y televisión en España. Dicha WEB está desarrollada en Angular 8.</p>"
+        "<p>Desarrollo de la web comercial y parte privada de <a href=\"https://www.pepephone.com\">https://www.pepephone.com</a>. En el equipo se trabaja bajo metodología Agile.</p>",
+        "<p>El projecto está construido con el siguiente stack tecnológico: React, NextJS, react-redux, redux-toolkit, redux-persist, typescript, MUI5, Jest, Cypress, Storybook, etc.</p>",
+        "<p>Entornos de integración continua con Jenkins. Integración con APIs de terceros...</p>"
+      ]
+    },
+    {
+      "job": "Senior Frontend Developer",
+      "date": "07/2019 – 09/2021",
+      "company": "Grupo MásMóvil. Alcobendas (Madrid), España",
+      "page": "https://www.grupomasmovil.com/",
+      "details": [
+        "<p>Desarrollo de la web comercial de <a href=\"https://www.yoigo.com\">https://www.yoigo.com</a>. El projecto está construido en diferentes tecnologías tabajando bajo equipos Agile.</p>",
+        "<p>Los dos stacks tecnológicos usados son: React, NextJS, react-redux, redux-toolkit, redux-persist, typescript, Material-UI, Jest, Cypress, etc.</p>",
+        "<p>Y por otro lado: Angular 9, con SSR, redux (NgRx), Karma, etc.</p>",
+        "<p>Entornos de integración continua con CircleCI y Jenkins. Integración con APIs de terceros...</p>"
       ]
     },
     {
@@ -123,10 +116,7 @@
     },
     {
       "head": {
-        "icon": [
-          "fas",
-          "pencil-alt"
-        ],
+        "icon": ["fas", "pencil-alt"],
         "title": "Experiencia Profesional"
       },
       "job": "Profesor de clases particulares",
@@ -139,10 +129,7 @@
     },
     {
       "head": {
-        "icon": [
-          "fas",
-          "graduation-cap"
-        ],
+        "icon": ["fas", "graduation-cap"],
         "title": "Formación Académica y Titulaciones"
       },
       "job": "Ingeniería Superior en Informática",
