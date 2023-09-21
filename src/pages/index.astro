@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+import Experience from '../components/Experience.astro'
+
+import { info } from '../data/info'
+import Footer from '../components/Footer.astro'
+
+// import { getWorkEntries } from '@nx-monorepo/contentful'
+
+// const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
+// const CONTENTFUL_ACCESS_TOKEN = import.meta.env.CONTENTFUL_ACCESS_TOKEN
+// const CONTENTFUL_PREVIEW_ACCESS_TOKEN = import.meta.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+
+// console.log({
+//   CONTENTFUL_SPACE_ID,
+//   CONTENTFUL_ACCESS_TOKEN,
+//   CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+// })
+
+// const entries = await getWorkEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_PREVIEW_ACCESS_TOKEN })
+
+// descripcion de mi cv para el meta
+const title = 'CV'
+const description = `Aquí puedes encontrar mi CV, toda mi experiencia y mi formación academica. Actualmente estoy trabajando como ${info.jobDescription}`
+const data = {
+  name: info.name,
+  baseUrl: 'https://jesusvallez.github.io',
+}
+---
+
+<Layout title={title} description={description} ogImagePath="/ogimage.png" info={data}>
+  <main class="flex flex-col items-center">
+    <Hero name={info.name} about={info.about} />
+  </main>
+  {Object.entries(info.experience).map(([key, value]) => <Experience name={key} job={value} />)}
+</Layout>
+
+<Footer />

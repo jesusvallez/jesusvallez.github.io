@@ -1,0 +1,28 @@
+---
+type Props = {
+  name: string
+  about: string[]
+}
+
+const { name, about } = Astro.props
+---
+
+<section class="mx-auto max-w-6xl px-4">
+  <p class="mt-12 text-body1 sm:mt-20">
+    Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>
+  </p>
+  <h1
+    class="sm:rt-2 mx-0 my-4 inline-block animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text text-h3 font-bold leading-none text-transparent sm:mb-4 sm:text-h1 sm:leading-tight"
+  >
+    {name}
+  </h1>
+  {
+    about?.length > 0 && (
+      <div class="space-y-1">
+        {about.map((elements) => (
+          <p class="text-body1">{elements}</p>
+        ))}
+      </div>
+    )
+  }
+</section>

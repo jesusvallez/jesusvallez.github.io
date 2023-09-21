@@ -1,0 +1,19 @@
+---
+import SocialMedia from './SocialMedia.astro'
+import { info } from '../data/info'
+---
+
+<footer class="mx-auto mb-4 mt-12 flex w-full max-w-6xl flex-row justify-between px-4">
+  <a
+    class="mx-2 text-caption hover:underline md:text-body2"
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://github.com/jesusvallez/astro-tailwind-eslint-prettier"
+  >
+    Creado con mucho{' '}
+    <span data-testid="emoji" role="img" aria-label="corazón blanco">♥</span>{' '}
+    por Jesús Vállez
+  </a>
+
+  <SocialMedia items={info.socialMedia} />
+</footer>

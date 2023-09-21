@@ -1,0 +1,114 @@
+---
+import type { Experience } from '../@types'
+import ExperienceItem from './ExperienceItem.astro'
+
+interface Props {
+  name: string
+  job: Experience[]
+}
+
+const { name, job } = Astro.props
+
+const idName = name
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase()
+  .replace(' ', '-')
+
+const MAX_JOB = 2
+const READ_MORE = 'Leer más'
+const READ_LESS = 'Leer menos'
+---
+
+<section
+  id={idName}
+  class="w-full flex items-start justify-between flex-col md:flex-row gap-2 max-w-6xl mx-auto px-4 mt-16 md:mt-20 lg:mt-24"
+>
+  <div class="grow-0 shrink-0 md:basis-48">
+    <h2
+      class="inline text-h5 font-extrabold uppercase bg-gradient-to-bl from-my-tertiary to-my-tertiary bg-[length:90%_35%] bg-bottom bg-no-repeat"
+    >
+      {name}
+    </h2>
+  </div>
+  <div class="w-full space-y-8">
+    {
+      job.map((work, index) => (
+        <article
+          id={`job${index >= MAX_JOB ? '-hidden' : ''}`}
+          class:list={[
+            'relative flex flex-col items-start gap-2',
+            {
+              hidden: index >= MAX_JOB,
+              'after:absolute after:bottom-0 after:w-full after:bg-gradient-to-t after:from-neutral-900/100 after:to-white/0 after:h-[var(--read-more-height)] after:content-[""]':
+                index === MAX_JOB - 1,
+            },
+          ]}
+        >
+          <div>
+            <h3 class="text-h5 from-my-secondary to-my-secondary inline bg-gradient-to-bl bg-[length:90%_18%] bg-bottom bg-no-repeat font-extrabold">
+              {work.name}
+            </h3>
+          </div>
+          <p class="text-caption text-my-primary mt-2 inline font-medium">{work.location}</p>
+          <ul class="w-full space-y-4">
+            {work.job.map((workspace) => (
+              <li>
+                <div class="mb-2 flex flex-col justify-between md:flex-row md:items-center">
+                  <h3 class="text-h6 font-extrabold">{workspace.name}</h3>
+                  <p class="text-body2 font-medium text-neutral-400">
+                    {workspace.startDate} - {workspace.endDate}
+                  </p>
+                </div>
+
+                <ExperienceItem description={workspace.description} />
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+    {
+      job.length >= MAX_JOB && (
+        <div class="flex justify-end">
+          <button class="text-body1 hover:from-my-tertiary hover:to-my-tertiary active:text-tertiary flex flex-row items-center bg-gradient-to-bl bg-[length:90%_10%] bg-bottom bg-no-repeat font-extrabold uppercase focus:outline-none focus:ring">
+            <span class="text-caption mr-2">{READ_MORE}</span>
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    --read-more-height: 35%;
+  }
+</style>
+
+<script define:vars={{ idName, READ_MORE, READ_LESS }}>
+  let isReadMore = false
+
+  const button = document.querySelector(`#${idName}`).querySelector('button')
+  const jobHidden = document.querySelector(`#${idName}`).querySelectorAll('#job-hidden')
+
+  button?.addEventListener('click', () => {
+    if (isReadMore) {
+      isReadMore = false
+      document.querySelector(`#${idName}`).style.setProperty(`--read-more-height`, '100%')
+      jobHidden.forEach((hiddeJob) => hiddeJob.classList.add('hidden'))
+    } else {
+      isReadMore = true
+      document.querySelector(`#${idName}`).style.setProperty(`--read-more-height`, '0%')
+      jobHidden.forEach((hiddeJob) => hiddeJob.classList.remove('hidden'))
+    }
+
+    const span = button.querySelector('span')
+    if (span) {
+      span.textContent = isReadMore ? READ_LESS : READ_MORE
+    }
+  })
+</script>

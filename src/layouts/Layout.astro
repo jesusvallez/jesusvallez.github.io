@@ -1,0 +1,28 @@
+---
+import { Toaster } from '@/components/ui/toaster'
+import MetaHead from '../components/MetaHead.astro'
+
+import '@/styles/globals.css'
+export interface Props {
+  title: string
+  description: string
+  ogImagePath: string
+  info: {
+    name: string
+    baseUrl: string
+  }
+}
+
+const { title, description, ogImagePath, info } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es" class="dark dark-mode">
+  <head>
+    <MetaHead title={title} description={description} ogImagePath={ogImagePath} info={info} />
+  </head>
+  <body class="flex flex-col dark:bg-neutral-900 dark:text-white">
+    <slot />
+    <Toaster client:load />
+  </body>
+</html>

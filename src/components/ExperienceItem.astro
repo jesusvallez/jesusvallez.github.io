@@ -1,0 +1,47 @@
+---
+import type { DescriptionJob, ListJob } from '../@types'
+
+interface Props {
+  description: Array<DescriptionJob | ListJob>
+}
+
+const { description } = Astro.props
+---
+
+{
+  description?.length > 0 &&
+    description.map((item) => (
+      <>
+        {item.type === 'list' && (
+          <ul class="ml-4 mt-2 space-y-1">
+            {item.text.map((listItem) => (
+              <li class="flex items-start">
+                <svg
+                  class="mr-2 h-5 w-5 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 6l6 6l-6 6" />
+                </svg>
+
+                <p class="text-body2">{listItem}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {item.type === 'paragraph' && item.text.length > 0 && (
+          <div class="space-y-1">
+            {item.text.map((listItem) => (
+              <p class="text-body2">{listItem}</p>
+            ))}
+          </div>
+        )}
+      </>
+    ))
+}
