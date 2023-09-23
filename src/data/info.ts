@@ -37,7 +37,7 @@ export const info: Info = {
                 type: 'paragraph',
                 text: [
                   'Desarrollo de la web comercial de https://www.yoigo.com. El projecto está construido en diferentes tecnologías tabajando bajo equipos Agile.',
-                  'Los dos stacks tecnológicos usados son: React, NextJS, react-redux, redux-toolkit, redux-persist, typescript, Material-UI, Jest, Cypress, etc; y por otro lado: Angular 9, con SSR, redux (NgRx), Karma, etc.. Todo esto juntoa entornos de integración continua como CircleCI o Jenkins.',
+                  'Los dos stacks tecnológicos usados son: React, NextJS, react-redux, redux-toolkit, redux-persist, typescript, Material-UI, Jest, Cypress, etc; y por otro lado: Angular 9, con SSR, redux (NgRx), Karma, etc.. Todo esto junto a entornos de integración continua como CircleCI o Jenkins.',
                 ],
               },
             ],
@@ -57,7 +57,7 @@ export const info: Info = {
                 type: 'paragraph',
                 text: [
                   'bMaker es un proyecto de BQ Educación y Macmillan Education. Este proyecto está orientado a centros de enseñanza y está destinada para aprender robótica y programación en las aulas de Primaria y Secundaria.',
-                  'Se contruyó con diferentes tecnologías y entre ellas se encuentra Angular 7.',
+                  'Se construyó con diferentes tecnologías y entre ellas se encuentra Angular 7.',
                 ],
               },
             ],
@@ -77,7 +77,7 @@ export const info: Info = {
                 type: 'paragraph',
                 text: [
                   'Aplicación WEB para la creación de contenidos, escribiendo textos únicos y a medida.',
-                  'Esta aplicación web se divide en dos grandes apartados: clientes y autores:',
+                  'Esta aplicación web se divide en dos grandes apartados, clientes y autores:',
                 ],
               },
               {
@@ -159,7 +159,7 @@ export const info: Info = {
         ],
       },
     ],
-    'Formacion Académica': [
+    'Formación Académica': [
       {
         name: "Escola Técnica Superior d'Enginyería",
         location: 'Universitat de València, Valencia',
