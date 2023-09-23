@@ -12,8 +12,10 @@ function EMailButton({ children, email }: Props) {
 
   return (
     <Button
+      role="button"
       variant="link"
       size="none"
+      aria-label="Email"
       onClick={() => {
         navigator.clipboard.writeText(email)
         toast({

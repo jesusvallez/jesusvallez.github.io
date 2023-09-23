@@ -10,7 +10,7 @@ interface Props {
 const { items } = Astro.props
 ---
 
-<ul class="flex flex-row gap-4">
+<div class="flex flex-row gap-4">
   {
     Object.entries(items).map(([key, value]) => {
       switch (key) {
@@ -78,4 +78,4 @@ const { items } = Astro.props
       }
     })
   }
-</ul>
+</div>
