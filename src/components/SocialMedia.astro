@@ -16,7 +16,7 @@ const { items } = Astro.props
       switch (key) {
         case 'github':
           return (
-            <a href={value} rel="noreferrer noopener" target="_blank">
+            <a href={value} rel="noreferrer noopener" target="_blank" title="GitHub">
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ const { items } = Astro.props
 
         case 'linkedin':
           return (
-            <a href={value} rel="noreferrer noopener" target="_blank">
+            <a href={value} rel="noreferrer noopener" target="_blank" title="LinkedIn">
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"

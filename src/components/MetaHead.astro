@@ -30,11 +30,12 @@ const { title, description, ogImagePath, info } = Astro.props
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+<meta name="keyword" content="portfolio, javascript, typescript, react, nextjs, developer, frontend" />
 {title && <link rel="canonical" href={`${info.baseUrl}${Astro.url.pathname}`} />}
 
 <!-- Primary Meta Tags -->
-{title && <title>{`${title} - ${info.name}`}</title>}
-{title && <meta name="title" content={`${title} - ${info.name}`} />}
+{title && <title>{`${title} | ${info.name}`}</title>}
+{title && <meta name="title" content={`${title} | ${info.name}`} />}
 {description && <meta name="description" content={description} />}
 
 <!-- Open Graph / Facebook -->
