@@ -3,7 +3,9 @@ import SocialMedia from './SocialMedia.astro'
 import { info } from '../data/info'
 ---
 
-<footer class="mx-auto mb-4 mt-12 flex w-full max-w-6xl flex-row justify-between px-4">
+<footer
+  class="mx-auto flex w-full max-w-6xl flex-col-reverse items-center justify-between gap-4 px-4 pb-4 pt-12 sm:flex-row"
+>
   <a
     class="text-caption hover:underline md:text-body2"
     target="_blank"
@@ -13,7 +15,7 @@ import { info } from '../data/info'
   >
     Creado con mucho{' '}
     <span data-testid="emoji" role="img" aria-label="corazón blanco">♥</span>{' '}
-    por Jesús Vállez Gomis
+     por Jesús Vállez Gomis
   </a>
 
   <SocialMedia items={info.socialMedia} />

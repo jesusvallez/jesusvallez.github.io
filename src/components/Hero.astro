@@ -1,28 +1,77 @@
 ---
 type Props = {
   name: string
-  about: string[]
+  aboutMeShort: string
 }
 
-const { name, about } = Astro.props
+const { name, aboutMeShort } = Astro.props
 ---
 
-<section class="mx-auto max-w-6xl px-4">
-  <p class="mt-12 text-body1 sm:mt-20">
-    Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>
-  </p>
-  <h1
-    class="sm:rt-2 mx-0 my-4 inline-block animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text text-h3 font-bold leading-none text-transparent sm:mb-4 sm:text-h1 sm:leading-tight"
+<section class="mx-auto mt-12 flex w-full max-w-6xl flex-col items-start gap-6 px-4 sm:mt-20">
+  <div class:list={['flex w-full flex-col-reverse justify-between gap-6', 'md:flex-row md:items-end']}>
+    <div class="flex flex-col gap-2">
+      <p class="text-body1">
+        Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>
+      </p>
+
+      <h1
+        class:list={[
+          'mx-0',
+          'inline-block text-h4 font-bold leading-none text-transparent',
+          'sm:text-h1 sm:leading-tight',
+          'animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text',
+        ]}
+      >
+        {name}
+      </h1>
+    </div>
+
+    <img
+      class:list={['h-36 w-36 rounded-full object-cover', 'md:h-52 md:w-52 ']}
+      src="/ogimage.png"
+      alt="Imagen de Jesús Vállez"
+      width="740"
+      height="420"
+    />
+  </div>
+
+  <p class="max-w-3xl text-body1">{aboutMeShort}</p>
+
+  <a
+    href="/curriculum-vitae"
+    title="Ver currículum vitae"
+    class:list={[
+      'px-6 py-2',
+      'inline-flex w-full items-center justify-center gap-2 rounded border border-my-secondary bg-my-secondary  text-sm font-medium text-white',
+      'hover:bg-transparent hover:text-my-secondary focus:outline-none focus:ring active:text-my-secondary',
+      'sm:w-auto',
+    ]}
   >
-    {name}
-  </h1>
-  {
+    <span class="text-sm font-medium">Ver Curriculum Vitae</span>
+
+    <svg
+      class="h-5 w-5 rtl:rotate-180"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M5 12l14 0"></path>
+      <path d="M13 18l6 -6"></path>
+      <path d="M13 6l6 6"></path>
+    </svg>
+  </a>
+
+  <!-- {
     about?.length > 0 && (
-      <div class="space-y-1">
+      <div class="space-y-4">
         {about.map((elements) => (
           <p class="text-body1">{elements}</p>
         ))}
       </div>
     )
-  }
+  } -->
 </section>

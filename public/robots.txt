@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jesusvallez.github.io/sitemap.xml
+Sitemap: https://jesusvallez.github.io/sitemap-index.xml

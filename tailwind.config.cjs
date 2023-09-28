@@ -97,6 +97,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwindcss-dotted-background'),
     require('tailwindcss-animate'),
     plugin(function astroComponentsPlugin({ addComponents }) {
       addComponents({

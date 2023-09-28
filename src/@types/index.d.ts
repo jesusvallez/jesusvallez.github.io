@@ -41,7 +41,8 @@ export interface Experiences {
 export interface Info {
   name: string
   jobDescription: string
-  about: string[]
+  aboutMeShort: string
+  aboutMe: string[]
   experience: Experiences
   socialMedia: SocialMedia
   projects: Project[]

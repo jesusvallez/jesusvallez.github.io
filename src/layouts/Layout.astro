@@ -16,12 +16,14 @@ export interface Props {
 const { title, description, ogImagePath, info } = Astro.props
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" class="dark dark-mode">
   <head>
     <MetaHead title={title} description={description} ogImagePath={ogImagePath} info={info} />
   </head>
-  <body class="flex flex-col dark:bg-neutral-900 dark:text-white">
+  <body
+    class="bg-dotted-spacing-10 bg-dotted-neutral-800 h-my-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] dark:bg-neutral-900 dark:text-white"
+  >
     <slot />
     <Toaster client:load />
   </body>
