@@ -22,7 +22,7 @@ const { title, description, ogImagePath, info } = Astro.props
     <MetaHead title={title} description={description} ogImagePath={ogImagePath} info={info} />
   </head>
   <body
-    class="bg-dotted-spacing-10 bg-dotted-neutral-800 h-my-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] dark:bg-neutral-900 dark:text-white"
+    class="h-my-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] bg-dotted-spacing-10 bg-dotted-neutral-800 dark:bg-neutral-900 dark:text-white"
   >
     <slot />
     <Toaster client:load />

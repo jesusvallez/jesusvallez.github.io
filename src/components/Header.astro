@@ -1,3 +1,7 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+---
+
 <header class="mx-auto mb-4 mt-8 flex w-full max-w-6xl flex-row items-center justify-between px-4">
   <div class="flex w-full items-center justify-between">
     <div class="md:flex md:items-center md:gap-12">
@@ -19,7 +23,10 @@
         <a
           href="/"
           title="Ir a la página de inicio"
-          class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+          class:list={[
+            'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75',
+            { underline: pathname === '/' },
+          ]}
         >
           Inicio
         </a>
@@ -29,7 +36,10 @@
         <a
           href="/curriculum-vitae"
           title="Ver el curriculum vitae"
-          class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+          class:list={[
+            'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75',
+            { underline: pathname === '/curriculum-vitae' },
+          ]}
         >
           CV
         </a>

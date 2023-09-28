@@ -11,9 +11,9 @@ const { name, job } = Astro.props
 
 const idName = name
   .normalize('NFD')
-  .replace(/[\u0300-\u036f]/g, '')
+  .replaceAll(/[\u0300-\u036f]/g, '')
+  .replaceAll(' ', '-')
   .toLowerCase()
-  .replace(' ', '-')
 
 const MAX_JOB = 2
 const READ_MORE = 'Leer más'
