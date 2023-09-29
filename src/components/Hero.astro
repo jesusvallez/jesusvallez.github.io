@@ -7,63 +7,61 @@ type Props = {
 const { name, aboutMeShort } = Astro.props
 ---
 
-<section class="mx-auto mt-6 flex w-full max-w-6xl flex-col items-start gap-6 px-6 sm:mt-20 md:px-4">
-  <div class:list={['flex w-full flex-col-reverse justify-between gap-6', 'md:flex-row md:items-end']}>
-    <div class="flex flex-col gap-2">
-      <p class="text-body1">
-        ¡Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>, mi nombre es
-      </p>
+<section
+  class="mx-auto mt-6 flex w-full max-w-6xl flex-col-reverse items-start gap-6 px-6 md:mt-20 md:flex-row md:px-4"
+>
+  <div class:list={['flex w-full flex-col items-start justify-between gap-4']}>
+    <p class="text-body1">
+      ¡Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>, mi nombre es
+    </p>
 
-      <h1
-        class:list={[
-          'mx-0',
-          'inline-block text-h4 font-bold leading-none text-transparent',
-          'sm:text-h1 sm:leading-tight',
-          'animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text',
-        ]}
+    <h1
+      class:list={[
+        'mx-0',
+        'inline-block text-h4 font-bold leading-none text-transparent',
+        'md:text-h1 md:leading-tight',
+        'animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text',
+      ]}
+    >
+      {name}
+    </h1>
+    <p class="max-w-3xl text-body1">{aboutMeShort}</p>
+    <a
+      href="/curriculum-vitae"
+      title="Ver currículum vitae"
+      class:list={[
+        'mt-4 px-6 py-2',
+        'inline-flex w-full items-center justify-center gap-2 rounded border border-my-secondary bg-my-secondary  text-sm font-medium text-white',
+        'hover:bg-transparent hover:text-my-secondary focus:outline-none focus:ring active:text-my-secondary',
+        'sm:mt-0 sm:w-auto',
+      ]}
+    >
+      <span class="text-sm font-medium">Ver Currículum Vitae</span>
+
+      <svg
+        class="h-5 w-5 rtl:rotate-180"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       >
-        {name}
-      </h1>
-    </div>
-
-    <img
-      class:list={['h-36 w-36 rounded-full object-cover', 'md:h-52 md:w-52 ']}
-      src="/ogimage.png"
-      alt="Imagen de Jesús Vállez"
-      width="740"
-      height="420"
-    />
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l14 0"></path>
+        <path d="M13 18l6 -6"></path>
+        <path d="M13 6l6 6"></path>
+      </svg>
+    </a>
   </div>
 
-  <p class="max-w-3xl text-body1">{aboutMeShort}</p>
-
-  <a
-    href="/curriculum-vitae"
-    title="Ver currículum vitae"
-    class:list={[
-      'px-6 py-2',
-      'inline-flex w-full items-center justify-center gap-2 rounded border border-my-secondary bg-my-secondary  text-sm font-medium text-white',
-      'hover:bg-transparent hover:text-my-secondary focus:outline-none focus:ring active:text-my-secondary',
-      'sm:w-auto',
-    ]}
-  >
-    <span class="text-sm font-medium">Ver Currículum Vitae</span>
-
-    <svg
-      class="h-5 w-5 rtl:rotate-180"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M5 12l14 0"></path>
-      <path d="M13 18l6 -6"></path>
-      <path d="M13 6l6 6"></path>
-    </svg>
-  </a>
+  <img
+    class:list={['h-36 w-36 rounded-full object-cover', 'md:h-52 md:w-52 ']}
+    src="/ogimage.png"
+    alt="Imagen de Jesús Vállez"
+    width="740"
+    height="420"
+  />
 
   <!-- {
     about?.length > 0 && (
