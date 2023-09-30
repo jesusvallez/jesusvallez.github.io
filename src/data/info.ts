@@ -4,7 +4,7 @@ export const info: Info = {
   name: 'Jesús Vállez Gomis',
   jobDescription: 'Senior Frontend Developer',
   aboutMeShort:
-    'La pasión por crear experiencias digitales de valor define mi profesión y hobby. No solo escribo código, sino que me involucro en diseño, análisis y implementación con visión crítica, siempre buscando evolucionar y mantenerme actualizado en el desarrollo web.',
+    'La pasión por crear experiencias digitales de valor define mi profesión y hobby. No solo escribo código, sino que me involucro en diseño, análisis e implementación con visión crítica, siempre buscando evolucionar y mantenerme actualizado en el desarrollo web.',
   aboutMe: [
     'Mi hobby es mi profesión y mi profesión es mi hobby.',
     'Mi pasión es crear experiencias digitales que aporte valor a los usuarios. También me gusta sentir la responsabilidad de los proyectos en los que participo y no me conformo con solo escribir código sino que me involucro en el proceso de diseño, análisis y, por supuesto, implementación de los proyectos en los que trabajo con visión crítica.',
