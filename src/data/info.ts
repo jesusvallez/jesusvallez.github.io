@@ -186,7 +186,6 @@ export const info: Info = {
   socialMedia: {
     github: 'https://github.com/jesusvallez',
     linkedin: 'https://www.linkedin.com/in/jesusvallez',
-    email: 'jesusvg91@gmail.com',
   },
   projects: [],
 }

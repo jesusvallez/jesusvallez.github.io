@@ -10,7 +10,6 @@ export interface ListJob {
 
 export interface SocialMedia {
   github: string
-  email: string
   linkedin: string
 }
 
