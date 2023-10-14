@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "lint:eslint": "eslint . --ext .js,.ts,.astro"
+    "lint:eslint": "eslint . --ext .js,.ts,.astro",
+    "contentful:generate-models": "npx ts-node ./scripts/generate-models.ts"
   },
   "dependencies": {
     "@astrojs/react": "3.0.3",
@@ -19,6 +20,7 @@
     "astro": "3.3.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.0.0",
+    "contentful": "10.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-merge": "1.14.0",
@@ -32,6 +34,8 @@
     "@types/react-dom": "18.2.13",
     "@typescript-eslint/eslint-plugin": "6.7.5",
     "@typescript-eslint/parser": "6.7.5",
+    "cf-content-types-generator": "2.12.9",
+    "dotenv": "16.3.1",
     "eslint": "8.51.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-config-standard": "17.1.0",
@@ -44,6 +48,7 @@
     "prettier-plugin-astro": "0.12.0",
     "prettier-plugin-tailwindcss": "0.5.6",
     "tailwindcss-dotted-background": "1.1.0",
+    "ts-node": "10.9.1",
     "typescript": "5.2.2"
   }
 }
