@@ -3,6 +3,8 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeBlogPageFields {
   url: EntryFieldTypes.Symbol
   title?: EntryFieldTypes.Symbol
+  description?: EntryFieldTypes.Text
+  tags?: EntryFieldTypes.Array<EntryFieldTypes.Symbol>
   image?: EntryFieldTypes.AssetLink
   body?: EntryFieldTypes.RichText
   recommendedPosts?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<EntrySkeletonType>>

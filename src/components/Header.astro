@@ -35,6 +35,19 @@ const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
 
       <li>
         <a
+          href="/blog"
+          title="Ir al blog"
+          class:list={[
+            'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75',
+            { underline: pathname === '/blog' },
+          ]}
+        >
+          Blog
+        </a>
+      </li>
+
+      <li>
+        <a
           href="/curriculum-vitae"
           title="Ver el curriculum vitae"
           class:list={[

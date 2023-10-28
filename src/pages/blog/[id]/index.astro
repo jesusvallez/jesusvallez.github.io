@@ -1,0 +1,45 @@
+---
+import { info } from '@/data/info'
+import Layout from '@/layouts/Layout.astro'
+
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+import { getBlogEntries, getBlogEntry } from '@/contentful/parsed'
+
+// descripcion de mi cv para el meta
+const title = 'Página personal'
+const description = `Actualmente estoy trabajando como ${info.jobDescription}. Aquí puedes encontrar toda mi trayectoria profesional, mi experiencia y mi formación académica.`
+const data = {
+  name: info.name,
+  baseUrl: 'https://jesusvallez.github.io',
+}
+
+export async function getStaticPaths() {
+  const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
+  const CONTENTFUL_DELIVERY_TOKEN = import.meta.env.CONTENTFUL_DELIVERY_TOKEN
+
+  const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_DELIVERY_TOKEN })
+  const blogEntries = entries.map((entry) => ({ params: { id: entry.url } }))
+
+  return blogEntries
+}
+
+const { id } = Astro.params
+
+const entry = await getBlogEntry({
+  space: import.meta.env.CONTENTFUL_SPACE_ID,
+  accessToken: import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
+  url: id ?? '',
+})
+---
+
+<Layout title={title} description={description} ogImagePath="/ogimage.png" info={data}>
+  <Header />
+
+  <section class="mx-auto mt-6 flex w-full max-w-4xl flex-col items-start gap-6 px-6 md:mt-20 md:px-4">
+    <h1 class:list={['inline-block self-center text-h4 font-bold', 'md:text-h2 md:leading-tight']}>{entry?.title}</h1>
+    <p class="line-clamp-3 text-body2" set:html={entry?.body} />
+  </section>
+
+  <Footer />
+</Layout>

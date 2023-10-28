@@ -31,7 +31,7 @@ const ERROR_TITLE = `
 
 const SPACEID = process.env.CONTENTFUL_SPACE_ID
 const TOKEN = process.env.CONTENTFUL_MANAGEMENT_TOKEN
-const PATH_MODEL = '../src/@types/contentful'
+const PATH_MODEL = './src/contentful/models'
 
 const spaceArg = SPACEID ? ['-s', SPACEID] : []
 const tokenArg = TOKEN ? ['-t', TOKEN] : []

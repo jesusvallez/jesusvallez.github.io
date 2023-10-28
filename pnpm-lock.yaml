@@ -14,6 +14,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: 5.0.2
     version: 5.0.2(astro@3.3.0)(tailwindcss@3.3.3)(ts-node@10.9.1)
+  '@contentful/rich-text-html-renderer':
+    specifier: 16.2.0
+    version: 16.2.0
   '@radix-ui/react-slot':
     specifier: 1.0.2
     version: 1.0.2(@types/react@18.2.28)(react@18.2.0)
@@ -55,6 +58,9 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: 17.7.0
     version: 17.7.0
+  '@contentful/rich-text-types':
+    specifier: 16.3.0
+    version: 16.3.0
   '@types/react':
     specifier: 18.2.28
     version: 18.2.28
@@ -658,6 +664,14 @@ packages:
     dependencies:
       chalk: 4.1.2
     dev: true
+
+  /@contentful/rich-text-html-renderer@16.2.0:
+    resolution: {integrity: sha512-yfZ8dLZebuQcPmeFOQvWcjORj52xCwSD/t8Hfizz5t8AJa8k4huzIYPY9DgAp6DPnvt7smQvM7r9QQ7ClftITg==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@contentful/rich-text-types': 16.3.0
+      escape-html: 1.0.3
+    dev: false
 
   /@contentful/rich-text-types@16.3.0:
     resolution: {integrity: sha512-OfQmAu5bxE0CgQA3WlUleVej+ifFG/iXmB2DmUl4EyWyFue1aiIvfjxQhcDRSH4n1jUNMJ6L1wInZL8uV5m3TQ==}
@@ -3334,6 +3348,10 @@ packages:
   /escalade@3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
     engines: {node: '>=6'}
+
+  /escape-html@1.0.3:
+    resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
+    dev: false
 
   /escape-string-regexp@1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
