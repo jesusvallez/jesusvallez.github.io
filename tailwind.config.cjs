@@ -107,6 +107,10 @@ module.exports = {
         '.h-my-screen': {
           height: ['100vh', '100dvh'],
         },
+        '.mask-my-image': {
+          WebkitMaskImage: 'linear-gradient(black 70%, transparent 95%)',
+          maskImage: 'linear-gradient(black 70%, transparent 95%);',
+        },
       })
     }),
   ],

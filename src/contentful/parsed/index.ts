@@ -1,26 +1,28 @@
 import { createClient } from 'contentful'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 import { type TypeBlogPageSkeleton } from '../models/index.ts'
 
 import { contentfulConfig, CONTENTFUL_MODE } from '../config'
+import type { BlogEntries, BlogEntry } from './models.ts'
 
-async function getLocales({
-  space,
-  accessToken,
-  mode = CONTENTFUL_MODE.PRODUCTION,
-}: {
+interface ContentfulClient {
   space: string
   accessToken: string
   mode?: CONTENTFUL_MODE
-}) {
+}
+
+function generateClient({ space, accessToken, mode = CONTENTFUL_MODE.PRODUCTION }: ContentfulClient) {
   const config = contentfulConfig[mode]
 
-  await createClient({
+  return createClient({
     ...config,
     space,
     accessToken,
-  })
+  }).withoutUnresolvableLinks
+}
+
+async function getLocales({ space, accessToken, mode = CONTENTFUL_MODE.PRODUCTION }: ContentfulClient) {
+  await generateClient({ space, accessToken, mode })
     .withAllLocales.getLocales()
     .then(({ items: entries }) => {
       for (const { code, name } of entries) {
@@ -33,41 +35,38 @@ async function getBlogEntries({
   space,
   accessToken,
   mode = CONTENTFUL_MODE.PRODUCTION,
-}: {
-  space: string
-  accessToken: string
-  mode?: CONTENTFUL_MODE
-}) {
-  const config = contentfulConfig[mode]
-
-  return await createClient({
-    ...config,
-    space,
-    accessToken,
-  })
+}: ContentfulClient): Promise<BlogEntries[] | null> {
+  return await generateClient({ space, accessToken, mode })
     .getEntries<TypeBlogPageSkeleton>({
       content_type: 'blogPage',
-      include: 3,
+      include: 2,
       locale: 'es',
+      select: [
+        'sys.id',
+        'sys.createdAt',
+        'fields.url',
+        'fields.title',
+        'fields.description',
+        'fields.image',
+        'fields.tags',
+      ],
     })
     .then(({ items: entries }) => {
       const fields = entries.map(({ fields, sys }) => ({
-        ...fields,
-        body: fields.body && documentToHtmlString(fields.body),
-        locale: sys.locale,
-        updatedAt: sys.updatedAt,
-        createdAt: sys.createdAt,
         id: sys.id,
+        createdAt: sys.createdAt,
+        url: fields.url,
+        title: fields.title,
+        description: fields.description,
+        image: fields.image?.sys.type === 'Asset' && fields.image.fields.file ? fields.image.fields.file : null,
+        tags: fields.tags || [],
       }))
 
       return fields
-
-      // for (const { fields, sys } of entries) {
-      //   const { createdAt, updatedAt, locale } = sys
-
-      //   console.log(`Sys: ${createdAt} ${updatedAt} ${locale}`)
-      //   console.log(fields)
-      // }
+    })
+    .catch((error) => {
+      console.log(error)
+      return null
     })
 }
 
@@ -76,19 +75,8 @@ async function getBlogEntry({
   accessToken,
   url,
   mode = CONTENTFUL_MODE.PRODUCTION,
-}: {
-  space: string
-  accessToken: string
-  url: string
-  mode?: CONTENTFUL_MODE
-}) {
-  const config = contentfulConfig[mode]
-
-  return await createClient({
-    ...config,
-    space,
-    accessToken,
-  })
+}: ContentfulClient & { url: string }): Promise<BlogEntry | null> {
+  return await generateClient({ space, accessToken, mode })
     .getEntries<TypeBlogPageSkeleton>({
       content_type: 'blogPage',
       'fields.url': url,
@@ -101,12 +89,13 @@ async function getBlogEntry({
       const { fields, sys } = entries[0]
 
       return {
-        ...fields,
-        body: fields.body && documentToHtmlString(fields.body),
-        locale: sys.locale,
-        updatedAt: sys.updatedAt,
-        createdAt: sys.createdAt,
         id: sys.id,
+        createdAt: sys.createdAt,
+        url: fields.url,
+        title: fields.title,
+        body: fields.body,
+        image: fields.image?.sys.type === 'Asset' && fields.image.fields.file ? fields.image.fields.file : null,
+        tags: fields.tags || [],
       }
     })
     .catch((error) => {
