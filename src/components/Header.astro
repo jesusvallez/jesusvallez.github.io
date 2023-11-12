@@ -39,7 +39,7 @@ const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
           title="Ir al blog"
           class:list={[
             'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75',
-            { underline: pathname === '/blog' },
+            { underline: pathname.startsWith('/blog') },
           ]}
         >
           Blog

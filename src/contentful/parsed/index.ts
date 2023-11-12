@@ -1,4 +1,4 @@
-import { createClient } from 'contentful'
+import contentful from 'contentful'
 
 import { type TypeBlogPageSkeleton } from '../models/index.ts'
 
@@ -14,7 +14,7 @@ interface ContentfulClient {
 function generateClient({ space, accessToken, mode = CONTENTFUL_MODE.PRODUCTION }: ContentfulClient) {
   const config = contentfulConfig[mode]
 
-  return createClient({
+  return contentful.createClient({
     ...config,
     space,
     accessToken,
@@ -40,6 +40,7 @@ async function getBlogEntries({
     .getEntries<TypeBlogPageSkeleton>({
       content_type: 'blogPage',
       include: 2,
+      order: ['-sys.createdAt'],
       locale: 'es',
       select: [
         'sys.id',

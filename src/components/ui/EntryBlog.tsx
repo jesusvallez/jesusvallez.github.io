@@ -1,12 +1,14 @@
-import type { BlogEntry } from '@/contentful/parsed/models'
 import { type PropsWithChildren } from 'react'
+
+import type { BlogEntry } from '@/contentful/parsed/models'
 import { documentToReactComponents, type Options } from '@contentful/rich-text-react-renderer'
-import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
+import richTextTypes from '@contentful/rich-text-types'
+import { isHyperlinkNode, isParagraphNode } from '@/contentful/helpers'
+
 import CodeEntry from './CodeEntry'
 import ParagraphEntry from './ParagraphEntry'
 import StrongEntry from './StrongEntry'
 import HyperlinkEntry from './HyperlinkEntry'
-import { isHyperlinkNode, isParagraphNode } from '@/contentful/helpers'
 
 interface Props {
   data: BlogEntry
@@ -14,12 +16,14 @@ interface Props {
 
 const options: Options = {
   renderMark: {
-    [MARKS.BOLD]: (text) => <StrongEntry>{text}</StrongEntry>,
-    [MARKS.CODE]: (text) => <CodeEntry>{text}</CodeEntry>,
+    [richTextTypes.MARKS.BOLD]: (text) => <StrongEntry>{text}</StrongEntry>,
+    [richTextTypes.MARKS.CODE]: (text) => <CodeEntry>{text}</CodeEntry>,
   },
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, next) => isParagraphNode(node) && <ParagraphEntry node={node}>{next}</ParagraphEntry>,
-    [INLINES.HYPERLINK]: (node, next) => isHyperlinkNode(node) && <HyperlinkEntry node={node}>{next}</HyperlinkEntry>,
+    [richTextTypes.BLOCKS.PARAGRAPH]: (node, next) =>
+      isParagraphNode(node) && <ParagraphEntry node={node}>{next}</ParagraphEntry>,
+    [richTextTypes.INLINES.HYPERLINK]: (node, next) =>
+      isHyperlinkNode(node) && <HyperlinkEntry node={node}>{next}</HyperlinkEntry>,
   },
 }
 
@@ -35,7 +39,7 @@ export function EntryBlog({ data }: PropsWithChildren<Props>) {
           <img
             src={data.image.url}
             alt={data.image.fileName}
-            className="mask-my-image aspect-[3/1] object-cover sm:w-full"
+            className="mask-my-image aspect-[5/2] object-cover sm:w-full"
           />
         )}
       </header>

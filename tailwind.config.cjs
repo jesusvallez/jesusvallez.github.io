@@ -92,7 +92,7 @@ module.exports = {
         body1: '1rem',
         body2: '0.875rem',
         caption: '0.75rem',
-        overline: '0,7rem',
+        overline: '0.7rem',
       },
     },
   },
@@ -108,8 +108,8 @@ module.exports = {
           height: ['100vh', '100dvh'],
         },
         '.mask-my-image': {
-          WebkitMaskImage: 'linear-gradient(black 70%, transparent 95%)',
-          maskImage: 'linear-gradient(black 70%, transparent 95%);',
+          WebkitMaskImage: 'linear-gradient(black 90%, transparent 100%)',
+          maskImage: 'linear-gradient(black 90%, transparent 100%);',
         },
       })
     }),

@@ -32,6 +32,10 @@ const entry = await getBlogEntry({
   accessToken: import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
   url: id ?? '',
 })
+
+if (!entry) {
+  throw new Error('No se ha encontrado la entrada')
+}
 ---
 
 <Layout title={title} description={description} ogImagePath="/ogimage.png" info={data}>
