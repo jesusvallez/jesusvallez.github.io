@@ -27,10 +27,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
       # - name: echo a secret
       #   run: echo "your secret token is ${{ secrets.CONTENTFUL_SPACE_ID }}"
-      # - name: Install, build, and upload your site
-      #   uses: withastro/action@v0
         # with:
             # path: . # La ubicación de la raíz de tu proyecto de Astro dentro del repositorio. (opcional)
             # node-version: 16 # La versión específica de Node que debe utilizarse para compilar tu proyecto. Por defecto es la 16. (opcional)
