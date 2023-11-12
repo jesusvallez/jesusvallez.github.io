@@ -9,5 +9,12 @@
     "paths": {
       "@/*": ["src/*"]
     }
+  },
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "nodenext",
+      "typeRoots": ["./src/env.d.ts"]
+    }
   }
 }

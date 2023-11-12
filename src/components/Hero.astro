@@ -1,10 +1,15 @@
 ---
+import type { Info } from '@/@types'
+
 type Props = {
-  name: string
-  aboutMeShort: string
+  info: Info
 }
 
-const { name, aboutMeShort } = Astro.props
+const { info } = Astro.props
+const { name, aboutMeShort, experience } = info
+
+const jobDescription = experience['Experiencia Profesional'][0].job[0].name
+const jobCompany = experience['Experiencia Profesional'][0].name
 ---
 
 <section
@@ -15,15 +20,18 @@ const { name, aboutMeShort } = Astro.props
       ¡Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>, mi nombre es
     </p>
 
-    <h1
+    <h2
       class:list={[
         'mx-0',
-        'inline-block text-h4 font-bold leading-none text-transparent',
-        'md:text-h1 md:leading-tight',
+        'inline text-h3 font-bold leading-tight text-transparent sm:block',
+        'md:text-h2 md:leading-tight',
         'animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text',
       ]}
     >
       {name}
+    </h2>
+    <h1 class:list={['mx-0', 'inline text-h5 font-bold leading-tight sm:block', 'md:text-h4 md:leading-tight']}>
+      {jobDescription} en {jobCompany}
     </h1>
     <p class="max-w-3xl text-body1">{aboutMeShort}</p>
     <a
@@ -56,7 +64,7 @@ const { name, aboutMeShort } = Astro.props
   </div>
 
   <img
-    class:list={['h-36 w-36 rounded-full object-cover', 'md:h-52 md:w-52 ']}
+    class:list={['h-36 w-36 rounded-full object-cover', 'md:h-48 md:w-48', 'lg:h-60 lg:w-60']}
     src="/ogimage.png"
     alt="Imagen de Jesús Vállez"
     width="740"

@@ -1,0 +1,23 @@
+---
+import { info } from '@/data/info'
+import Layout from '@/layouts/Layout.astro'
+
+import Blog from '@/components/Blog.astro'
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+
+// descripcion de mi cv para el meta
+const title = 'Página personal'
+const description = `Actualmente estoy trabajando como ${info.jobDescription}. Aquí puedes encontrar toda mi trayectoria profesional, mi experiencia y mi formación académica.`
+const data = {
+  name: info.name,
+  baseUrl: 'https://jesusvallez.github.io',
+}
+---
+
+<Layout title={title} description={description} ogImagePath="/ogimage.png" info={data}>
+  <Header />
+  <Blog />
+
+  <Footer />
+</Layout>

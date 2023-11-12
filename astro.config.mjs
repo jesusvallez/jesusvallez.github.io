@@ -1,13 +1,17 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import react from '@astrojs/react';
+import { defineConfig } from 'astro/config'
+import tailwind from '@astrojs/tailwind'
+import react from '@astrojs/react'
 
-import sitemap from "@astrojs/sitemap";
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jesusvallez.github.io',
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), react(), sitemap()]
-});
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+    sitemap(),
+  ],
+})
