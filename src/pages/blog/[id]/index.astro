@@ -17,9 +17,9 @@ const data = {
 
 export async function getStaticPaths() {
   const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
-  const CONTENTFUL_DELIVERY_TOKEN = import.meta.env.CONTENTFUL_DELIVERY_TOKEN
+  const CONTENTFUL_TOKEN = import.meta.env.CONTENTFUL_TOKEN
 
-  const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_DELIVERY_TOKEN })
+  const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_TOKEN })
   const blogEntries = entries?.map((entry) => ({ params: { id: entry.url } }))
 
   return blogEntries
@@ -29,7 +29,7 @@ const { id } = Astro.params
 
 const entry = await getBlogEntry({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
-  accessToken: import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
+  accessToken: import.meta.env.CONTENTFUL_TOKEN,
   url: id ?? '',
 })
 

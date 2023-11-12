@@ -2,10 +2,9 @@
 import { getBlogEntries } from '@/contentful/parsed'
 
 const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
-// const CONTENTFUL_PREVIEW_TOKEN = import.meta.env.CONTENTFUL_PREVIEW_TOKEN
-const CONTENTFUL_DELIVERY_TOKEN = import.meta.env.CONTENTFUL_DELIVERY_TOKEN
+const CONTENTFUL_TOKEN = import.meta.env.CONTENTFUL_TOKEN
 
-const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_DELIVERY_TOKEN })
+const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_TOKEN })
 
 if (!entries) {
   throw new Error('No se ha encontrado la entrada')
