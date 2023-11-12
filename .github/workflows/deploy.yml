@@ -17,6 +17,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,9 +28,6 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
-        env:
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN }}
         uses: withastro/action@v0
         # with:
             # path: . # La ubicación de la raíz de tu proyecto de Astro dentro del repositorio. (opcional)
