@@ -48,7 +48,7 @@ export const info: Info = {
       },
       {
         name: 'BQ - Educación',
-        location: 'Las Rozas de Madrid, España',
+        location: 'Las Rozas, Madrid, España',
         job: [
           {
             name: 'Frontend Developer',
