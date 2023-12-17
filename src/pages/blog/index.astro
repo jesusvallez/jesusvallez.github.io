@@ -1,23 +1,42 @@
 ---
-import { info } from '@/data/info'
 import Layout from '@/layouts/Layout.astro'
+import { getBlogEntries } from '@/contentful/parsed'
 
-import Blog from '@/components/Blog.astro'
-import Header from '@/components/Header.astro'
-import Footer from '@/components/Footer.astro'
+const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
+const CONTENTFUL_TOKEN = import.meta.env.CONTENTFUL_TOKEN
 
-// descripcion de mi cv para el meta
-const title = 'Página personal'
-const description = `Actualmente estoy trabajando como ${info.jobDescription}. Aquí puedes encontrar toda mi trayectoria profesional, mi experiencia y mi formación académica.`
-const data = {
-  name: info.name,
-  baseUrl: 'https://jesusvallez.github.io',
+const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_TOKEN })
+
+if (!entries) {
+  throw new Error('No se ha encontrado la entrada')
 }
 ---
 
-<Layout title={title} description={description} ogImagePath="/ogimage.png" info={data}>
-  <Header />
-  <Blog />
+<Layout>
+  <section class="mx-auto mt-6 flex w-full max-w-6xl flex-col items-start gap-6 px-6 md:mt-12 md:px-4">
+    <h1 class:list={['inline-block self-center text-h4 font-bold', 'md:text-h2 md:leading-tight']}>Blog</h1>
 
-  <Footer />
+    <ul class="grid w-full grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-8">
+      {
+        entries &&
+          entries.map((e) => (
+            <li>
+              <a href={`/blog/${e.url}`} class="block rounded-sm p-2 transition-colors hover:bg-neutral-700/50">
+                <img
+                  alt="Art"
+                  src={
+                    e.image?.url ??
+                    'https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+                  }
+                  class="mb-2 h-40 w-full rounded-sm object-cover"
+                />
+
+                <h3 class="line-clamp-1 w-auto text-h6 font-extrabold ">{e.title}</h3>
+                <p class="line-clamp-3 text-body2" set:html={e.description} />
+              </a>
+            </li>
+          ))
+      }
+    </ul>
+  </section>
 </Layout>

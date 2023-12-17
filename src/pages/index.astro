@@ -1,40 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Hero from '../components/Hero.astro'
-
 import { info } from '../data/info'
-import Footer from '../components/Footer.astro'
-import Header from '@/components/Header.astro'
 
-// import { getWorkEntries } from '@nx-monorepo/contentful'
-
-// const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
-// const CONTENTFUL_ACCESS_TOKEN = import.meta.env.CONTENTFUL_ACCESS_TOKEN
-// const CONTENTFUL_PREVIEW_ACCESS_TOKEN = import.meta.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-
-// console.log({
-//   CONTENTFUL_SPACE_ID,
-//   CONTENTFUL_ACCESS_TOKEN,
-//   CONTENTFUL_PREVIEW_ACCESS_TOKEN,
-// })
-
-// const entries = await getWorkEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_PREVIEW_ACCESS_TOKEN })
-
-// descripcion de mi cv para el meta
-const title = 'Curriculum Vitae'
-const description = `Actualmente estoy trabajando como ${info.jobDescription}. Aquí puedes encontrar toda mi trayectoria profesional, mi experiencia y mi formación académica.`
-const data = {
-  name: info.name,
-  baseUrl: 'https://jesusvallez.github.io',
-}
+const { name, aboutMeShort, experience } = info
+const jobDescription = experience['Experiencia Profesional'][0].job[0].name
+const jobCompany = experience['Experiencia Profesional'][0].name
 ---
 
-<Layout title={title} description={description} ogImagePath="/ogimage.png" info={data}>
-  <Header />
+<Layout>
+  <section
+    class="mx-auto mt-6 flex w-full max-w-6xl flex-col-reverse items-start gap-6 px-6 md:mt-20 md:flex-row md:px-4"
+  >
+    <div class:list={['flex w-full flex-col items-start justify-between gap-4']}>
+      <p class="text-body1">
+        ¡Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>, mi nombre es
+      </p>
 
-  <main class="flex flex-col items-center">
-    <Hero info={info} />
-  </main>
+      <h2
+        class:list={[
+          'mx-0',
+          'inline font-bold leading-tight text-transparent [font-size:_clamp(28px,_6vw+12px,_56px)] sm:block',
+          'animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text',
+        ]}
+      >
+        {name}
+      </h2>
+      <h1 class:list={['mx-0', 'inline text-h5 font-bold leading-tight sm:block', 'md:text-h4 md:leading-tight']}>
+        {jobDescription} en {jobCompany}
+      </h1>
+      <p class="max-w-3xl text-body1">{aboutMeShort}</p>
+      <a
+        href="/curriculum-vitae"
+        title="Ver currículum vitae"
+        class:list={[
+          'mt-4 px-6 py-2',
+          'inline-flex w-full items-center justify-center gap-2 rounded border border-my-secondary bg-my-secondary  text-sm font-medium text-white',
+          'hover:bg-transparent hover:text-my-secondary focus:outline-none focus:ring active:text-my-secondary',
+          'sm:mt-0 sm:w-auto',
+        ]}
+      >
+        <span class="text-sm font-medium">Ver Currículum Vitae</span>
 
-  <Footer />
+        <svg
+          class="h-5 w-5 rtl:rotate-180"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
+      </a>
+    </div>
+
+    <img
+      class:list={['h-36 w-36 rounded-full object-cover', 'md:h-48 md:w-48', 'lg:h-60 lg:w-60']}
+      src="/ogimage.png"
+      alt="Imagen de Jesús Vállez"
+      width="740"
+      height="420"
+    />
+  </section>
 </Layout>
