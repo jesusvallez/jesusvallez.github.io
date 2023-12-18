@@ -20,12 +20,12 @@ export const info: Info = {
             name: 'Senior Frontend Developer',
             startDate: 'Oct 2021',
             endDate: 'Presente',
+            technologies: ['next.js', 'react', 'typescript', 'nx', 'mui5', 'jest', 'playwright', 'storybook'],
             description: [
               {
                 type: 'paragraph',
                 text: [
-                  'Desarrollo la web comercial y la parte privada de https://www.pepephone.com, una compañía de telecomunicaciones que ofrece servicios de telefonía fija, móvil e internet en España y, ahora también, Netflix y Prime. También participo en otros proyectos multimarca del Grupo MásMóvil.',
-                  'Trabajo bajo metodología Agile y utilizo tecnologías como React, Next.js, react-redux, redux-toolkit, typescript, MUI5, Jest, Cypress y Storybook. Todo ello gestionado mediante un monorepo en NX, lo que me facilita el mantenimiento y la reutilización de funciones y componentes.',
+                  'Trabajo en el equipo de desarrollo de Pepephone, siendo uno de los proyectos más relevantes https://www.pepephone.com. Ayudo a mejorar la web comercial desde mi punto de vista técnico, garantizando un mejor funcionamiento y llegando a gestionar algún proyecto interno.',
                 ],
               },
             ],
@@ -34,12 +34,12 @@ export const info: Info = {
             name: 'Senior Frontend Developer',
             startDate: 'Jul 2019',
             endDate: 'Sep 2021',
+            technologies: ['angular 9', 'next.js', 'react', 'typescript', 'lerna', 'mui4', 'jest', 'karma', 'cypress'],
             description: [
               {
                 type: 'paragraph',
                 text: [
-                  'Desarrollo de la web comercial de https://www.yoigo.com. El projecto está construido en diferentes tecnologías tabajando bajo equipos Agile.',
-                  'Los dos stacks tecnológicos usados son: React, NextJS, react-redux, redux-toolkit, redux-persist, typescript, Material-UI, Jest, Cypress, etc; y por otro lado: Angular 9, con SSR, redux (NgRx), Karma, etc.. Todo esto junto a entornos de integración continua como CircleCI o Jenkins.',
+                  'Trabajé desarrollando la parte comercial de https://www.yoigo.com identificando oportunidades para mejorar el sistema existente, así como el uso de un CMS o incluso en la parte del checkout.',
                 ],
               },
             ],
@@ -54,12 +54,12 @@ export const info: Info = {
             name: 'Frontend Developer',
             startDate: 'May 2018',
             endDate: 'Jun 2019',
+            technologies: ['angular 7', 'typescript', 'ngrx', 'jest', 'cypress'],
             description: [
               {
                 type: 'paragraph',
                 text: [
-                  'bMaker es un proyecto de BQ Educación y Macmillan Education. Este proyecto está orientado a centros de enseñanza y está destinada para aprender robótica y programación en las aulas de Primaria y Secundaria.',
-                  'Se construyó con diferentes tecnologías y entre ellas se encuentra Angular 7.',
+                  'Estuve trabajando en el equipo de desarrollo de la plataforma educativa bMaker (https://www.bmaker.es). Ayude a crear la plataforma desde cero y aportando mi experiencia en el desarrollo de aplicaciones web e incluso creando contenido para la plataforma.',
                 ],
               },
             ],
@@ -74,19 +74,12 @@ export const info: Info = {
             name: 'PHP Developer',
             startDate: 'Ago 2017',
             endDate: 'Abr 2018',
+            technologies: ['symfony', 'drupal', 'php', 'angularjs', 'mysql', 'redis', 'rabbitmq', 'elasticsearch'],
             description: [
               {
                 type: 'paragraph',
                 text: [
-                  'Aplicación WEB para la creación de contenidos, escribiendo textos únicos y a medida.',
-                  'Esta aplicación web se divide en dos grandes apartados, clientes y autores:',
-                ],
-              },
-              {
-                type: 'list',
-                text: [
-                  'El apartado de clientes está construido con AngularJS, ayudándose de una API pública hecha en Symfony 2 y Drupal para el backend.',
-                  'El apartado de autores, está implementado con Drupal 7 y Symfony en su totalidad.',
+                  'Participé en el desarrollo de una aplicación web para la gestión de contenidos, donde los clientes encargan la creación de textos únicos y a medida y los autores los escriben pasando una serie de validaciones.',
                 ],
               },
             ],
@@ -101,12 +94,12 @@ export const info: Info = {
             name: 'PHP Developer',
             startDate: 'Dic 2016',
             endDate: 'May 2017',
+            technologies: ['Yii 2.0', 'PHP 7', 'MySql', 'redis', 'rabbitmq', 'elasticsearch'],
             description: [
               {
-                type: 'list',
+                type: 'paragraph',
                 text: [
-                  'Aplicación WEB basada en formularios dinámico y exportación de datos. Todo esto basado en el Framework Yii 1.1.',
-                  'Aplicación WEB que registra los gastos de los empleados mostrando al administrador estadísticas en forma de gráficas con la posibilidad de exportarlos en formato XLS. Aplicación basada en el Framework Yii 2.0.',
+                  'Ayudé a implementar una plataforma desde cero para la gestión de pagos de los empleados, asegurando el correcto funcionamiento y la escalabilidad de la misma. Además de continuar con la evolución de la plataforma principal, ayudandé a evolucionar la arquitectura.',
                 ],
               },
             ],
@@ -122,12 +115,12 @@ export const info: Info = {
             name: 'PHP Developer',
             startDate: 'Feb 2015',
             endDate: 'May 2016',
+            technologies: ['Yii 1.1', 'PHP 5.6', 'MySql', 'redis'],
             description: [
               {
                 type: 'paragraph',
                 text: [
-                  'Dos aplicaciones WEB relacionadas con el ámbito sanitario (Reumatología y VIH).',
-                  'Entre las distintas funcionalidades se encuentran las consultas masivas y eficientes sobre pacientes y medicamentos, o monitorización del coste económico y evolutivo del paciente hacia el hospitales además de la exportación de datos en formato XLS. Aplicaciones basadas en el Framework Yii 1.1.',
+                  'Me inicié y continué con el desarrollo de dos plataformas donde empecé a utilizar mis habilidades para resolver problemas matemáticos.',
                 ],
               },
             ],
@@ -135,7 +128,8 @@ export const info: Info = {
           {
             name: 'Investigador No Doctor',
             startDate: 'Jun 2014',
-            endDate: 'Enero 2015',
+            endDate: 'Ene 2015',
+            technologies: ['Java', 'J2EE', 'Swagger', 'JAX-RS'],
             description: [
               {
                 type: 'paragraph',
@@ -149,6 +143,7 @@ export const info: Info = {
             name: 'Investigador No Doctor',
             startDate: 'Jul 2013',
             endDate: 'Sep 2014',
+            technologies: ['Java', 'J2EE', 'Swagger', 'JAX-RS', 'Asterisk', 'AGI'],
             description: [
               {
                 type: 'paragraph',
@@ -170,12 +165,11 @@ export const info: Info = {
             name: 'Ingeniero Informático',
             startDate: 'Sep 2009',
             endDate: 'Ene 2015',
+            technologies: ['Java', 'J2EE', 'Swagger', 'JAX-RS'],
             description: [
               {
                 type: 'paragraph',
-                text: [
-                  'Proyecto Final de Carrera: servicio WEB REST destinado a la integración de información de un CRM. Desarrollada sobre la tecnología J2EE, anotaciones Java JAX-RS y Swagger UI para la documentación.',
-                ],
+                text: ['Nota en el proyecto final de carrera: 9'],
               },
             ],
           },

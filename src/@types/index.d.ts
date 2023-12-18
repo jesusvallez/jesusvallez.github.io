@@ -26,6 +26,7 @@ export interface Job {
   startDate: string
   endDate: string
   description: Array<DescriptionJob | ListJob>
+  technologies: string[]
 }
 
 export interface Experience {
