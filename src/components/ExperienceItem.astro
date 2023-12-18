@@ -29,7 +29,7 @@ const { description } = Astro.props
                   <path d="M9 6l6 6l-6 6" />
                 </svg>
 
-                <p class="text-body2">{listItem}</p>
+                <p class="text-body2 [text-wrap:pretty]">{listItem}</p>
               </li>
             ))}
           </ul>
@@ -38,7 +38,7 @@ const { description } = Astro.props
         {item.type === 'paragraph' && item.text.length > 0 && (
           <div class="space-y-1">
             {item.text.map((listItem) => (
-              <p class="text-body2">{listItem}</p>
+              <p class="text-body2 [text-wrap:pretty]">{listItem}</p>
             ))}
           </div>
         )}

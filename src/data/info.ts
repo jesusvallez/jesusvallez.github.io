@@ -25,7 +25,7 @@ export const info: Info = {
               {
                 type: 'paragraph',
                 text: [
-                  'Trabajo en el equipo de desarrollo de Pepephone, siendo uno de los proyectos más relevantes https://www.pepephone.com. Ayudo a mejorar la web comercial desde mi punto de vista técnico, garantizando un mejor funcionamiento y llegando a gestionar algún proyecto interno.',
+                  'Trabajo en el equipo de desarrollo de Pepephone, siendo uno de los proyectos más relevantes pepephone.com. Ayudo a mejorar la web comercial desde un punto de vista técnico, garantizando un mejor funcionamiento y llegando a gestionar algún proyecto interno.',
                 ],
               },
             ],

@@ -3,19 +3,17 @@ const info = new URL(Astro.request.url)
 const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
 ---
 
-<header class="mx-auto mb-2 mt-4 flex w-full max-w-6xl flex-row items-center justify-between px-6 md:px-4">
+<header class="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-6 pb-2 pt-4 md:px-4">
   <div class="flex w-full items-center justify-between">
-    <div class="md:flex md:items-center md:gap-12">
-      <a class="block text-white dark:text-white" href="/">
-        <span class="sr-only">Home</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 300 300">
-          <path
-            fill="currentColor"
-            d="m40.2 201.1 37.8-.3c.9 20.2.8 24.8 5.5 33.6 4.7 8.9 10.4 15.8 29 15.8 20.8 0 25.8-13.5 28.2-20.4 2.4-6.9 3.6-18 3.6-33V14.5h59.2v180.2c0 22-2.6 39.2-8 51.3-5.3 12.2-23.7 38.3-68.4 39.2-36.9.8-55.2-6.6-68-20-14.3-14.8-19.4-37.8-19-64.2Zm183.3 67.1v-38h36.3v38h-36.3Z"
-          ></path>
-        </svg>
-      </a>
-    </div>
+    <a class="block text-white dark:text-white" href="/">
+      <span class="sr-only">Inicio</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 300 300">
+        <path
+          fill="currentColor"
+          d="m40.2 201.1 37.8-.3c.9 20.2.8 24.8 5.5 33.6 4.7 8.9 10.4 15.8 29 15.8 20.8 0 25.8-13.5 28.2-20.4 2.4-6.9 3.6-18 3.6-33V14.5h59.2v180.2c0 22-2.6 39.2-8 51.3-5.3 12.2-23.7 38.3-68.4 39.2-36.9.8-55.2-6.6-68-20-14.3-14.8-19.4-37.8-19-64.2Zm183.3 67.1v-38h36.3v38h-36.3Z"
+        ></path>
+      </svg>
+    </a>
   </div>
 
   <nav aria-label="Global">
@@ -43,19 +41,6 @@ const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
           ]}
         >
           Blog
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="/curriculum-vitae"
-          title="Ver el curriculum vitae"
-          class:list={[
-            'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75',
-            { underline: pathname === '/curriculum-vitae' },
-          ]}
-        >
-          CV
         </a>
       </li>
     </ul>
