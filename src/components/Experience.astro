@@ -38,6 +38,14 @@ const { name, job } = Astro.props
                 </div>
 
                 <ExperienceItem description={workspace.description} />
+
+                <ul class="flex flex-row flex-wrap gap-2 pt-2">
+                  {workspace.technologies.map((tech) => (
+                    <li class="whitespace-nowrap rounded-full bg-[#323232] px-2 py-1 text-xs font-semibold text-white">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>

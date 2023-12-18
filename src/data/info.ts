@@ -20,7 +20,7 @@ export const info: Info = {
             name: 'Senior Frontend Developer',
             startDate: 'Oct 2021',
             endDate: 'Presente',
-            technologies: ['next.js', 'react', 'typescript', 'nx', 'mui5', 'jest', 'playwright', 'storybook'],
+            technologies: ['next.js 14', 'react', 'typescript', 'nx', 'mui5', 'jest', 'playwright', 'storybook'],
             description: [
               {
                 type: 'paragraph',
@@ -34,7 +34,17 @@ export const info: Info = {
             name: 'Senior Frontend Developer',
             startDate: 'Jul 2019',
             endDate: 'Sep 2021',
-            technologies: ['angular 9', 'next.js', 'react', 'typescript', 'lerna', 'mui4', 'jest', 'karma', 'cypress'],
+            technologies: [
+              'angular 9',
+              'next.js 11',
+              'react',
+              'typescript',
+              'lerna',
+              'mui4',
+              'jest',
+              'karma',
+              'Cypress',
+            ],
             description: [
               {
                 type: 'paragraph',
@@ -54,7 +64,7 @@ export const info: Info = {
             name: 'Frontend Developer',
             startDate: 'May 2018',
             endDate: 'Jun 2019',
-            technologies: ['angular 7', 'typescript', 'ngrx', 'jest', 'cypress'],
+            technologies: ['angular 7', 'typescript', 'ngrx', 'jest', 'Cypress'],
             description: [
               {
                 type: 'paragraph',
@@ -74,7 +84,7 @@ export const info: Info = {
             name: 'PHP Developer',
             startDate: 'Ago 2017',
             endDate: 'Abr 2018',
-            technologies: ['symfony', 'drupal', 'php', 'angularjs', 'mysql', 'redis', 'rabbitmq', 'elasticsearch'],
+            technologies: ['Symfony', 'Drupal', 'PHP 7', 'angularjs', 'MySql', 'redis', 'rabbitmq', 'elasticsearch'],
             description: [
               {
                 type: 'paragraph',
