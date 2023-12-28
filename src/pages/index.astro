@@ -1,10 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { info } from '../data/info'
+import Layout from '@/layouts/Layout.astro'
 import Experience from '@/components/Experience.astro'
 import SocialMedia from '@/components/SocialMedia.astro'
 
-const { name, aboutMeShort, experience } = info
+import { info } from '../data/info'
+
+const { name, experience, aboutMeShort } = info
 const jobDescription = experience['Experiencia Profesional'][0].job[0].name
 const jobCompany = experience['Experiencia Profesional'][0].name
 ---
@@ -13,7 +14,7 @@ const jobCompany = experience['Experiencia Profesional'][0].name
   <div class="grid w-full max-w-6xl grid-cols-1 grid-rows-1 gap-x-4 gap-y-4 lg:grid-cols-[1fr_1fr]">
     <aside class="mt-6 flex flex-col gap-4 px-6 md:mt-20 lg:px-4">
       <img
-        class:list={['h-36 w-36 rounded-full object-cover', 'md:h-48 md:w-48', 'lg:h-60 lg:w-60']}
+        class:list={['h-32 w-32 rounded-full object-cover', 'md:h-40 md:w-40', 'lg:h-52 lg:w-52']}
         src="/ogimage.png"
         alt="Imagen de Jesús Vállez"
         width="740"
@@ -21,27 +22,29 @@ const jobCompany = experience['Experiencia Profesional'][0].name
       />
 
       <p class="text-body1">
-        ¡Hola a todos! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>, mi nombre es
+        ¡Hey! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>, mi nombre es
       </p>
 
-      <h2
+      <h1
         class:list={[
-          'mx-0 inline font-bold leading-tight text-transparent [font-size:_clamp(28px,_5vw+12px,_56px)] sm:block md:[font-size:_clamp(28px,_4vw+4px,_56px)]',
+          'mx-0 inline font-bold leading-tight text-transparent [font-size:_clamp(28px,_5vw+12px,_50px)] sm:block md:[font-size:_clamp(28px,_4vw+4px,_50px)]',
           'animate-[gradient_5s_ease_infinite] bg-gradient-to-r from-my-secondary via-my-primary to-my-tertiary bg-[length:150%_100%] bg-clip-text',
         ]}
       >
         {name}
-      </h2>
-      <h1
+      </h1>
+      <h2
         class:list={[
           'mx-0 [text-wrap:pretty]',
-          'inline text-h5 font-bold leading-tight sm:block',
-          'md:text-h4 md:leading-tight',
+          'inline text-h6 font-bold leading-tight sm:block',
+          'md:text-h5 md:leading-tight',
         ]}
       >
-        {jobDescription} en {jobCompany}
-      </h1>
-      <p class="max-w-3xl text-body1 [text-wrap:pretty]">{aboutMeShort}</p>
+        Actualmente trabajo como {jobDescription} en {jobCompany}
+      </h2>
+      <p class="max-w-3xl text-body1 [text-wrap:pretty]">
+        {aboutMeShort}
+      </p>
       <SocialMedia items={info.socialMedia} />
     </aside>
     <section>

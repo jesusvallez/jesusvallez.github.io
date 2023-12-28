@@ -4,7 +4,7 @@ export const info: Info = {
   name: 'Jesús Vállez Gomis',
   jobDescription: 'Senior Frontend Developer',
   aboutMeShort:
-    'La pasión por crear experiencias digitales de valor define mi profesión y hobby. No solo escribo código, sino que me involucro en diseño, análisis e implementación con visión crítica, siempre buscando evolucionar y mantenerme actualizado en el desarrollo web.',
+    '+10 años de experiencia. Crear experiencias digitales define mi profesión y hobby. Trato de ir más allá involucrandome en el análisis, diseño e implementación con visión crítica.',
   aboutMe: [
     'Mi hobby es mi profesión y mi profesión es mi hobby.',
     'Mi pasión es crear experiencias digitales que aporte valor a los usuarios. También me gusta sentir la responsabilidad de los proyectos en los que participo y no me conformo con solo escribir código sino que me involucro en el proceso de diseño, análisis y, por supuesto, implementación de los proyectos en los que trabajo con visión crítica.',
@@ -25,7 +25,7 @@ export const info: Info = {
               {
                 type: 'paragraph',
                 text: [
-                  'Trabajo en el equipo de desarrollo de Pepephone, siendo uno de los proyectos más relevantes pepephone.com. Ayudo a mejorar la web comercial desde un punto de vista técnico, garantizando un mejor funcionamiento y llegando a gestionar algún proyecto interno.',
+                  'Ayudo a mejorar la web comercial desde un punto de vista técnico, garantizando un mejor funcionamiento a nivel de performace. También trabajo gestionando algún proyecto interno.',
                 ],
               },
             ],
@@ -49,7 +49,7 @@ export const info: Info = {
               {
                 type: 'paragraph',
                 text: [
-                  'Trabajé desarrollando la parte comercial de https://www.yoigo.com identificando oportunidades para mejorar el sistema existente, así como el uso de un CMS o incluso en la parte del checkout.',
+                  'Desarrollador de la parte comercial de yoigo.com identificando oportunidades para mejorar el sistema existente, así como el uso de un CMS o el módulo del checkout.',
                 ],
               },
             ],
@@ -69,7 +69,7 @@ export const info: Info = {
               {
                 type: 'paragraph',
                 text: [
-                  'Estuve trabajando en el equipo de desarrollo de la plataforma educativa bMaker (https://www.bmaker.es). Ayude a crear la plataforma desde cero y aportando mi experiencia en el desarrollo de aplicaciones web e incluso creando contenido para la plataforma.',
+                  'Desarrollador de la plataforma educativa bMaker. Creación y puesta en producción, llegando a crear contenido de caracter informático.',
                 ],
               },
             ],
@@ -89,7 +89,7 @@ export const info: Info = {
               {
                 type: 'paragraph',
                 text: [
-                  'Participé en el desarrollo de una aplicación web para la gestión de contenidos, donde los clientes encargan la creación de textos únicos y a medida y los autores los escriben pasando una serie de validaciones.',
+                  'Desarrollador de la aplicación web dedicada a la gestión de contenidos. Mejora delproceso de automatización de trabajos y correcciones.',
                 ],
               },
             ],
@@ -109,7 +109,7 @@ export const info: Info = {
               {
                 type: 'paragraph',
                 text: [
-                  'Ayudé a implementar una plataforma desde cero para la gestión de pagos de los empleados, asegurando el correcto funcionamiento y la escalabilidad de la misma. Además de continuar con la evolución de la plataforma principal, ayudandé a evolucionar la arquitectura.',
+                  'Creación de una plataforma para la gestión de pagos internos de los empleados, dotando a la web de roles para una futura administración. Mejoras en la plataforma principal y evolución de la arquitectura.',
                 ],
               },
             ],
@@ -130,21 +130,7 @@ export const info: Info = {
               {
                 type: 'paragraph',
                 text: [
-                  'Me inicié y continué con el desarrollo de dos plataformas donde empecé a utilizar mis habilidades para resolver problemas matemáticos.',
-                ],
-              },
-            ],
-          },
-          {
-            name: 'Investigador No Doctor',
-            startDate: 'Jun 2014',
-            endDate: 'Ene 2015',
-            technologies: ['Java', 'J2EE', 'Swagger', 'JAX-RS'],
-            description: [
-              {
-                type: 'paragraph',
-                text: [
-                  'Proyecto Final de Carrera: Servicio WEB REST destinado a la integración de información de un CRM. Desarrollada sobre la tecnología J2EE, anotaciones Java JAX-RS y Swagger UI para la documentación.',
+                  'Mantenimiento de dos plataformas donde gracias a diferentes formulas y sentencias SQL pude resolver problemas de optimización.',
                 ],
               },
             ],
@@ -152,7 +138,7 @@ export const info: Info = {
           {
             name: 'Investigador No Doctor',
             startDate: 'Jul 2013',
-            endDate: 'Sep 2014',
+            endDate: 'Ene 2015',
             technologies: ['Java', 'J2EE', 'Swagger', 'JAX-RS', 'Asterisk', 'AGI'],
             description: [
               {
@@ -179,7 +165,10 @@ export const info: Info = {
             description: [
               {
                 type: 'paragraph',
-                text: ['Nota en el proyecto final de carrera: 9'],
+                text: [
+                  'Nota del proyecto: 9',
+                  'Servicio WEB REST destinado a la integración de información de un CRM. Desarrollada sobre la tecnología J2EE, anotaciones Java JAX-RS y Swagger UI para la documentación.',
+                ],
               },
             ],
           },
