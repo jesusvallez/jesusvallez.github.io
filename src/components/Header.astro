@@ -5,7 +5,7 @@ const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
 
 <header class="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-6 pb-2 pt-4 md:px-4">
   <div class="flex w-full items-center justify-between">
-    <a class="block text-white dark:text-white" href="/">
+    <a class="block text-white" href="/">
       <span class="sr-only">Inicio</span>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 300 300">
         <path
@@ -22,10 +22,7 @@ const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
         <a
           href="/"
           title="Ir a la página de inicio"
-          class:list={[
-            'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75',
-            { underline: pathname === '/' },
-          ]}
+          class:list={['text-white transition hover:text-gray-500/75', { underline: pathname === '/' }]}
         >
           Inicio
         </a>
@@ -35,10 +32,7 @@ const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
         <a
           href="/blog"
           title="Ir al blog"
-          class:list={[
-            'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75',
-            { underline: pathname.startsWith('/blog') },
-          ]}
+          class:list={['text-white transition hover:text-gray-500/75', { underline: pathname.startsWith('/blog') }]}
         >
           Blog
         </a>
