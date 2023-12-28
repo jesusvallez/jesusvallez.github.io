@@ -1,14 +1,17 @@
 ---
-import '@/styles/globals.css'
 import MetaHead from '@/components/MetaHead.astro'
 import Footer from '@/components/Footer.astro'
 import Header from '@/components/Header.astro'
 
 import { info } from '../data/info'
 
+import '@/styles/globals.css'
+import '@fontsource-variable/onest'
+
 const image = '/ogimage.png'
 const title = 'Curriculum Vitae'
 const description = `Actualmente estoy trabajando como ${info.jobDescription}. Aquí puedes encontrar toda mi trayectoria profesional, mi experiencia y mi formación académica.`
+
 const data = {
   name: info.name,
   baseUrl: 'https://jesusvallez.github.io',
@@ -16,12 +19,12 @@ const data = {
 ---
 
 <!doctype html>
-<html lang="es" class="dark dark-mode">
+<html lang="es">
   <head>
     <MetaHead title={title} description={description} ogImagePath={image} info={data} />
   </head>
   <body
-    class="h-my-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] bg-dotted-spacing-10 bg-dotted-[#292929] dark:bg-neutral-900 dark:text-white"
+    class="h-my-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] bg-neutral-900 text-white bg-dotted-spacing-10 bg-dotted-[#292929]"
   >
     <Header />
     <main class="flex flex-col items-center">

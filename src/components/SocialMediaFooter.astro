@@ -3,7 +3,6 @@ import Github from '@/components/icons/Github.astro'
 import Linkedin from '@/components/icons/Linkedin.astro'
 
 import { type SocialMedia } from '../@types'
-import SocialPill from './SocialPill.astro'
 
 interface Props {
   items: SocialMedia
@@ -18,16 +17,16 @@ const { items } = Astro.props
       switch (key) {
         case 'github':
           return (
-            <SocialPill title="GitHub" href={value}>
-              <Github class="h-6 w-6" /> GitHub
-            </SocialPill>
+            <a href={value} rel="noreferrer noopener" target="_blank" title="GitHub">
+              <Github class="h-6 w-6 hover:bg-transparent hover:text-my-primary focus:outline-none focus:ring active:text-my-primary" />
+            </a>
           )
 
         case 'linkedin':
           return (
-            <SocialPill title="LinkedIn" href={value}>
-              <Linkedin class="h-6 w-6" /> LinkdIn
-            </SocialPill>
+            <a href={value} rel="noreferrer noopener" target="_blank" title="LinkedIn">
+              <Linkedin class="h-6 w-6 hover:bg-transparent hover:text-my-primary focus:outline-none focus:ring active:text-my-primary" />
+            </a>
           )
 
         default:
