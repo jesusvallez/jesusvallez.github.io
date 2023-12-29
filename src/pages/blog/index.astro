@@ -1,11 +1,17 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { getBlogEntries } from '@/contentful/parsed'
+// import { CONTENTFUL_MODE } from '@/contentful/config'
 
 const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
 const CONTENTFUL_TOKEN = import.meta.env.CONTENTFUL_TOKEN
+// const CONTENTFUL_TOKEN = import.meta.env.CONTENTFUL_PREVIEW_TOKEN
 
-const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_TOKEN })
+const entries = await getBlogEntries({
+  space: CONTENTFUL_SPACE_ID,
+  accessToken: CONTENTFUL_TOKEN,
+  // mode: CONTENTFUL_MODE.PREVIEW,
+})
 
 if (!entries) {
   throw new Error('No se ha encontrado la entrada')

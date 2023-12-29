@@ -3,12 +3,19 @@ import Layout from '@/layouts/Layout.astro'
 
 import { getBlogEntries, getBlogEntry } from '@/contentful/parsed'
 import { EntryBlog } from '@/components/ui/EntryBlog'
+// import { CONTENTFUL_MODE } from '@/contentful/config'
 
 export async function getStaticPaths() {
   const CONTENTFUL_SPACE_ID = import.meta.env.CONTENTFUL_SPACE_ID
   const CONTENTFUL_TOKEN = import.meta.env.CONTENTFUL_TOKEN
+  // const CONTENTFUL_TOKEN = import.meta.env.CONTENTFUL_PREVIEW_TOKEN
 
-  const entries = await getBlogEntries({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_TOKEN })
+  const entries = await getBlogEntries({
+    space: CONTENTFUL_SPACE_ID,
+    accessToken: CONTENTFUL_TOKEN,
+    // mode: CONTENTFUL_MODE.PREVIEW,
+  })
+
   const blogEntries = entries?.map((entry) => ({ params: { id: entry.url } }))
 
   return blogEntries
@@ -17,9 +24,11 @@ export async function getStaticPaths() {
 const { id } = Astro.params
 
 const entry = await getBlogEntry({
+  url: id ?? '',
   space: import.meta.env.CONTENTFUL_SPACE_ID,
   accessToken: import.meta.env.CONTENTFUL_TOKEN,
-  url: id ?? '',
+  // accessToken: import.meta.env.CONTENTFUL_PREVIEW_TOKEN,
+  // mode: CONTENTFUL_MODE.PREVIEW,
 })
 
 if (!entry) {
