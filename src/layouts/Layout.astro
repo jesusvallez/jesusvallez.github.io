@@ -7,6 +7,7 @@ import { info } from '../data/info'
 
 import '@/styles/globals.css'
 import '@fontsource-variable/onest'
+import Background from '@/components/Background.astro'
 
 const image = '/ogimage.png'
 const title = 'Curriculum Vitae'
@@ -24,13 +25,7 @@ const data = {
     <MetaHead title={title} description={description} ogImagePath={image} info={data} />
   </head>
   <body class="h-my-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] bg-neutral-900 text-white">
-    <div class="fixed left-0 top-0 -z-10 h-full w-full">
-      <div
-        class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-900 bg-[radial-gradient(#292929_1px,#171717_1px)] bg-[size:40px_40px]"
-      >
-      </div>
-    </div>
-
+    <Background />
     <Header />
     <main class="flex flex-col items-center">
       <slot />
