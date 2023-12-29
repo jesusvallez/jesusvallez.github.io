@@ -27,7 +27,10 @@ if (!entries) {
         entries &&
           entries.map((e) => (
             <li>
-              <a href={`/blog/${e.url}`} class="block rounded-sm p-2 transition-colors hover:bg-neutral-700/50">
+              <a
+                href={`/blog/${e.url}`}
+                class="block rounded-sm border-2 border-neutral-700/20 bg-neutral-700/10 p-2 transition-colors hover:bg-neutral-700/50"
+              >
                 <img
                   alt="Art"
                   src={
