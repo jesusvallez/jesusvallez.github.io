@@ -8,12 +8,5 @@ module.exports = {
   printWidth: 120,
   plugins: [require.resolve('prettier-plugin-astro'), require.resolve('prettier-plugin-tailwindcss')],
   overrides: [{ files: '*.astro', options: { parser: 'astro' } }],
-  overrides: [
-    {
-      files: ['*.json', '*.md', '*.toml', '*.yml'],
-      options: {
-        useTabs: false,
-      },
-    },
-  ],
+  overrides: [{ files: ['*.json', '*.md', '*.toml', '*.yml'], options: { useTabs: false } }],
 }

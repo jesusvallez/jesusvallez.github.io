@@ -20,6 +20,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'unused-imports/no-unused-imports': 'error',
+    'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
     'unused-imports/no-unused-vars': [
       'warn',
       {
@@ -32,40 +33,19 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.js'],
-      rules: {
-        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
-      },
-    },
-    {
       files: ['*.astro'],
       parser: 'astro-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],
       },
-      rules: {
-        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
-      },
     },
     {
-      files: ['*.ts'],
+      files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       extends: ['plugin:@typescript-eslint/recommended'],
-      rules: {
-        '@typescript-eslint/no-unused-vars': [
-          'warn',
-          {
-            argsIgnorePattern: '^_',
-            varsIgnorePattern: '^_',
-            caughtErrorsIgnorePattern: '^_',
-          },
-        ],
-      },
     },
     {
-      // Define the configuration for `<script>` tag.
-      // Script in `<script>` is assigned a virtual file name with the `.js` extension.
       files: ['**/*.astro/*.js', '*.astro/*.js'],
       parser: '@typescript-eslint/parser',
     },
