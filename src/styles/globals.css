@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Adjusted Arial Fallback';
+  src: local(Arial);
+  size-adjust: 105%;
+  ascent-override: 95%;
+  descent-override: 27%;
+  line-gap-override: 0%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -75,7 +84,7 @@
     @apply border-border;
   }
   html {
-    font-family: 'Onest Variable', system-ui, sans-serif;
+    font-family: 'Onest Variable', 'Adjusted Arial Fallback', system-ui, sans-serif;
   }
 
   body {
