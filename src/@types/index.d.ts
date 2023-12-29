@@ -34,16 +34,14 @@ export interface Experience {
   location: string
   job: Job[]
 }
-export interface Experiences {
-  [key: string]: Experience[]
-}
 
 export interface Info {
   name: string
   jobDescription: string
   aboutMeShort: string
   aboutMe: string[]
-  experience: Experiences
+  professionalExp: Experience[]
+  academicExp: Experience[]
   socialMedia: SocialMedia
   projects: Project[]
 }
