@@ -1,0 +1,42 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import { cva, type VariantProps } from 'class-variance-authority'
+
+const card = cva('block rounded-sm border-[1px] border-neutral-700 bg-neutral-800/20 transition duration-300', {
+  variants: {
+    size: {
+      none: '',
+      small: 'p-1',
+      medium: 'p-2',
+      large: 'p-4',
+    },
+    blurred: {
+      none: '',
+      normal: 'backdrop-blur-lg',
+      high: 'backdrop-blur-3xl',
+    },
+    clickable: {
+      no: [],
+      yes: ['hover:bg-neutral-700/50 hover:scale-105'],
+    },
+  },
+  defaultVariants: {
+    clickable: 'no',
+    blurred: 'high',
+    size: 'medium',
+  },
+})
+
+export interface Props extends HTMLAttributes<'div'>, VariantProps<typeof card> {}
+
+/**
+ * For Astro components, we recommend setting your defaultVariants within
+ * Astro.props (which are `undefined` by default)
+ */
+const { clickable, size, ...rest } = Astro.props
+const classCard = card({ clickable, size, class: rest.class })
+---
+
+<div class={classCard}>
+  <slot />
+</div>

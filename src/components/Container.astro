@@ -1,0 +1,19 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import { cva, type VariantProps } from 'class-variance-authority'
+
+const container = cva('w-full max-w-6xl px-6 md:px-4 mt-4')
+
+export interface Props extends HTMLAttributes<'main'>, VariantProps<typeof container> {}
+
+/**
+ * For Astro components, we recommend setting your defaultVariants within
+ * Astro.props (which are `undefined` by default)
+ */
+const { ...rest } = Astro.props
+const classContainer = container({ class: rest.class })
+---
+
+<main class={classContainer}>
+  <slot />
+</main>
