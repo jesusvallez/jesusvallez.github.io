@@ -33,13 +33,15 @@ export function EntryBlog({ data }: PropsWithChildren<Props>) {
   return (
     <>
       <header className="flex w-full flex-col items-center justify-end">
-        <h1 className="mb-6 inline-block self-center text-h5 font-bold md:text-h3 md:leading-tight">{data.title}</h1>
+        <h1 className="mb-6 inline-block w-full text-center text-h5 font-bold md:text-h3 md:leading-tight">
+          {data.title}
+        </h1>
 
         {data.image && (
           <img
             src={data.image.url}
             alt={data.image.fileName}
-            className="mask-my-image aspect-[5/2] object-cover sm:w-full"
+            className="mask-my-image mb-4 aspect-[5/2] rounded-sm object-cover sm:w-full"
           />
         )}
       </header>
