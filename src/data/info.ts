@@ -19,7 +19,7 @@ export const info: Info = {
           name: 'Senior Frontend Developer',
           startDate: 'Oct 2021',
           endDate: 'Presente',
-          technologies: ['next.js 14', 'react', 'typescript', 'nx', 'mui5', 'jest', 'playwright', 'storybook'],
+          technologies: ['Next.js 14', 'React', 'TypeScript', 'Nx', 'MUI5', 'Jest', 'Playwright', 'Storybook'],
           description: [
             {
               type: 'paragraph',
@@ -33,7 +33,7 @@ export const info: Info = {
           name: 'Senior Frontend Developer',
           startDate: 'Jul 2019',
           endDate: 'Sep 2021',
-          technologies: ['angular 9', 'next.js 11', 'react', 'typescript', 'lerna', 'mui4', 'jest', 'karma', 'Cypress'],
+          technologies: ['Angular 9', 'Next.js 11', 'React', 'TypeScript', 'Lerna', 'MUI4', 'Jest', 'karma', 'Cypress'],
           description: [
             {
               type: 'paragraph',
@@ -53,7 +53,7 @@ export const info: Info = {
           name: 'Frontend Developer',
           startDate: 'May 2018',
           endDate: 'Jun 2019',
-          technologies: ['angular 7', 'typescript', 'ngrx', 'jest', 'Cypress'],
+          technologies: ['Angular 7', 'TypeScript', 'NgRx', 'Jest', 'Cypress'],
           description: [
             {
               type: 'paragraph',
@@ -73,7 +73,7 @@ export const info: Info = {
           name: 'PHP Developer',
           startDate: 'Ago 2017',
           endDate: 'Abr 2018',
-          technologies: ['Symfony', 'Drupal', 'PHP 7', 'angularjs', 'MySql', 'redis', 'rabbitmq', 'elasticsearch'],
+          technologies: ['Symfony', 'Drupal', 'PHP 7', 'AngularJS', 'MySQL', 'Redis', 'RabbitMQ', 'Elasticsearch'],
           description: [
             {
               type: 'paragraph',
@@ -93,7 +93,7 @@ export const info: Info = {
           name: 'PHP Developer',
           startDate: 'Dic 2016',
           endDate: 'May 2017',
-          technologies: ['Yii 2.0', 'PHP 7', 'MySql', 'redis', 'rabbitmq', 'elasticsearch'],
+          technologies: ['Yii 2.0', 'PHP 7', 'MySQL', 'Redis', 'RabbitMQ', 'Elasticsearch'],
           description: [
             {
               type: 'paragraph',
@@ -114,7 +114,7 @@ export const info: Info = {
           name: 'PHP Developer',
           startDate: 'Feb 2015',
           endDate: 'May 2016',
-          technologies: ['Yii 1.1', 'PHP 5.6', 'MySql', 'redis'],
+          technologies: ['Yii 1.1', 'PHP 5.6', 'MySQL', 'Redis'],
           description: [
             {
               type: 'paragraph',
