@@ -78,7 +78,7 @@ export const info: Info = {
             {
               type: 'paragraph',
               text: [
-                'Desarrollador de la aplicación web dedicada a la gestión de contenidos. Mejora delproceso de automatización de trabajos y correcciones.',
+                'Desarrollador de la aplicación web dedicada a la gestión de contenidos. Mejora del proceso de automatización de trabajos y correcciones.',
               ],
             },
           ],
