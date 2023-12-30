@@ -18,6 +18,7 @@ const { items } = Astro.props
         case 'github':
           return (
             <a href={value} rel="noreferrer noopener" target="_blank" title="GitHub">
+              <span class="sr-only">GitHub</span>
               <Github class="h-6 w-6 hover:bg-transparent hover:text-my-primary focus:outline-none focus:ring active:text-my-primary" />
             </a>
           )
@@ -25,6 +26,7 @@ const { items } = Astro.props
         case 'linkedin':
           return (
             <a href={value} rel="noreferrer noopener" target="_blank" title="LinkedIn">
+              <span class="sr-only">LinkedIn</span>
               <Linkedin class="h-6 w-6 hover:bg-transparent hover:text-my-primary focus:outline-none focus:ring active:text-my-primary" />
             </a>
           )
