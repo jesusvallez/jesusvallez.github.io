@@ -6,6 +6,7 @@ import SocialMedia from '@/components/SocialMedia.astro'
 import { info } from '../data/info'
 import Code from '@/components/icons/Code.astro'
 import School from '@/components/icons/School.astro'
+import Container from '@/components/Container.astro'
 
 const { name, aboutMeShort, professionalExp, academicExp } = info
 const jobDescription = professionalExp[0].job[0].name
@@ -13,10 +14,10 @@ const jobCompany = professionalExp[0].name
 ---
 
 <Layout>
-  <div class="grid w-full max-w-6xl grid-cols-1 grid-rows-1 gap-x-4 gap-y-4 lg:grid-cols-[1fr_1fr]">
-    <aside class="mt-8 flex flex-col gap-4 px-6 md:mt-12 lg:px-4">
+  <Container class="flex flex-col items-start justify-center gap-8 lg:flex-row">
+    <aside class="flex shrink grow-0 basis-6/12 flex-col gap-4">
       <img
-        class:list={['h-32 w-32 rounded-full object-cover', 'md:h-40 md:w-40', 'lg:h-52 lg:w-52']}
+        class:list={['h-32 w-32 rounded-full border-2 border-neutral-700 object-cover', 'md:size-40', 'lg:size-52']}
         src="/profile.png"
         alt="Imagen de Jesús Vállez"
         width="740"
@@ -49,7 +50,7 @@ const jobCompany = professionalExp[0].name
       </p>
       <SocialMedia items={info.socialMedia} />
     </aside>
-    <div class="mt-8 flex w-full max-w-6xl flex-col items-start justify-between gap-8 md:mt-12">
+    <div class="flex w-full max-w-6xl shrink grow-0 basis-6/12 flex-col items-start justify-between gap-8">
       {
         professionalExp.length > 0 && (
           <Experience name="Experiencia Profesional" job={professionalExp}>
@@ -65,5 +66,5 @@ const jobCompany = professionalExp[0].name
         )
       }
     </div>
-  </div>
+  </Container>
 </Layout>

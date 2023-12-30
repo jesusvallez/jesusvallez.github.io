@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro'
 
 import { getBlogEntries, getBlogEntry } from '@/contentful/parsed'
 import { EntryBlog } from '@/components/ui/EntryBlog'
+import Container from '@/components/Container.astro'
 // import { CONTENTFUL_MODE } from '@/contentful/config'
 
 export async function getStaticPaths() {
@@ -37,7 +38,7 @@ if (!entry) {
 ---
 
 <Layout>
-  <article class="mx-auto mt-6 flex w-full max-w-4xl flex-col items-start gap-6 px-6 md:mt-12 md:px-4">
+  <Container>
     {entry && <EntryBlog data={entry} />}
-  </article>
+  </Container>
 </Layout>
