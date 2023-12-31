@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+import Container from '@/components/Container.astro'
+import Back from '@/components/icons/Back.astro'
+---
+
+<Layout>
+  <Container class="f flex h-full flex-col items-center justify-center gap-8">
+    <div class="flex flex-col items-center justify-center gap-4">
+      <h1 class="text-center text-h1 font-bold leading-none">404</h1>
+      <a
+        href="/"
+        title="Ir a la página de inicio"
+        class:list={['text-white underline transition hover:text-gray-500/75']}
+      >
+        <Back class="mr-2 inline-block size-4" />
+        Quizá deberías volver a la página de inicio
+      </a>
+    </div>
+  </Container>
+</Layout>
