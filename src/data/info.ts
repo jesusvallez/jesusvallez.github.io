@@ -1,5 +1,41 @@
 import type { Info } from '../@types'
 
+enum technologies {
+  agi = 'AGI',
+  angular7 = 'Angular 7',
+  angular9 = 'Angular 9',
+  angularjs = 'AngularJS',
+  asterisk = 'Asterisk',
+  cypress = 'Cypress',
+  drupal = 'Drupal',
+  elasticsearch = 'Elasticsearch',
+  j2ee = 'J2EE',
+  java = 'Java',
+  jaxrs = 'JAX-RS',
+  jest = 'Jest',
+  karma = 'Karma',
+  lerna = 'Lerna',
+  mui4 = 'MUI4',
+  mui5 = 'MUI5',
+  mysql = 'MySQL',
+  nextjs11 = 'Next.js 11',
+  nextjs14 = 'Next.js 14',
+  ngrx = 'NgRx',
+  nx = 'Nx',
+  php5 = 'PHP 5.6',
+  php7 = 'PHP 7',
+  playwrigth = 'Playwright',
+  rabbitmq = 'RabbitMQ',
+  react = 'React',
+  redis = 'Redis',
+  storybook = 'Storybook',
+  swagger = 'Swagger',
+  symfony = 'Symfony',
+  typescript = 'TypeScript',
+  yii = 'Yii 1.1',
+  yii2 = 'Yii 2.0',
+}
+
 export const info: Info = {
   name: 'Jesús Vállez Gomis',
   jobDescription: 'Senior Frontend Developer',
@@ -19,12 +55,21 @@ export const info: Info = {
           name: 'Senior Frontend Developer',
           startDate: 'Oct 2021',
           endDate: 'Presente',
-          technologies: ['Next.js 14', 'React', 'TypeScript', 'Nx', 'MUI5', 'Jest', 'Playwright', 'Storybook'],
+          technologies: [
+            technologies.nextjs14,
+            technologies.react,
+            technologies.typescript,
+            technologies.nx,
+            technologies.mui5,
+            technologies.jest,
+            technologies.playwrigth,
+            technologies.storybook,
+          ],
           description: [
             {
               type: 'paragraph',
               text: [
-                'Ayudo a mejorar la web comercial desde un punto de vista técnico, garantizando un mejor funcionamiento a nivel de performace. También trabajo gestionando algún proyecto interno.',
+                'Ayudo a mejorar la web comercial desde un punto de vista técnico, garantizando un mejor funcionamiento a nivel de performace. También gestiono el frontend de un proyecto interno.',
               ],
             },
           ],
@@ -33,7 +78,17 @@ export const info: Info = {
           name: 'Senior Frontend Developer',
           startDate: 'Jul 2019',
           endDate: 'Sep 2021',
-          technologies: ['Angular 9', 'Next.js 11', 'React', 'TypeScript', 'Lerna', 'MUI4', 'Jest', 'karma', 'Cypress'],
+          technologies: [
+            technologies.angular9,
+            technologies.nextjs11,
+            technologies.react,
+            technologies.typescript,
+            technologies.lerna,
+            technologies.mui4,
+            technologies.jest,
+            technologies.karma,
+            technologies.cypress,
+          ],
           description: [
             {
               type: 'paragraph',
@@ -53,7 +108,13 @@ export const info: Info = {
           name: 'Frontend Developer',
           startDate: 'May 2018',
           endDate: 'Jun 2019',
-          technologies: ['Angular 7', 'TypeScript', 'NgRx', 'Jest', 'Cypress'],
+          technologies: [
+            technologies.angular7,
+            technologies.typescript,
+            technologies.ngrx,
+            technologies.jest,
+            technologies.cypress,
+          ],
           description: [
             {
               type: 'paragraph',
@@ -73,7 +134,17 @@ export const info: Info = {
           name: 'PHP Developer',
           startDate: 'Ago 2017',
           endDate: 'Abr 2018',
-          technologies: ['Symfony', 'Drupal', 'PHP 7', 'AngularJS', 'MySQL', 'Redis', 'RabbitMQ', 'Elasticsearch'],
+          technologies: [
+            technologies.symfony,
+            technologies.drupal,
+            technologies.php7,
+            technologies.angularjs,
+            technologies.mysql,
+            technologies.redis,
+            technologies.rabbitmq,
+            technologies.elasticsearch,
+          ],
+
           description: [
             {
               type: 'paragraph',
@@ -93,7 +164,15 @@ export const info: Info = {
           name: 'PHP Developer',
           startDate: 'Dic 2016',
           endDate: 'May 2017',
-          technologies: ['Yii 2.0', 'PHP 7', 'MySQL', 'Redis', 'RabbitMQ', 'Elasticsearch'],
+          technologies: [
+            technologies.yii2,
+            technologies.php7,
+            technologies.mysql,
+            technologies.redis,
+            technologies.rabbitmq,
+            technologies.elasticsearch,
+          ],
+
           description: [
             {
               type: 'paragraph',
@@ -114,7 +193,7 @@ export const info: Info = {
           name: 'PHP Developer',
           startDate: 'Feb 2015',
           endDate: 'May 2016',
-          technologies: ['Yii 1.1', 'PHP 5.6', 'MySQL', 'Redis'],
+          technologies: [technologies.yii, technologies.php5, technologies.mysql, technologies.redis],
           description: [
             {
               type: 'paragraph',
@@ -128,7 +207,14 @@ export const info: Info = {
           name: 'Investigador No Doctor',
           startDate: 'Jul 2013',
           endDate: 'Ene 2015',
-          technologies: ['Java', 'J2EE', 'Swagger', 'JAX-RS', 'Asterisk', 'AGI'],
+          technologies: [
+            technologies.java,
+            technologies.j2ee,
+            technologies.swagger,
+            technologies.jaxrs,
+            technologies.asterisk,
+            technologies.agi,
+          ],
           description: [
             {
               type: 'paragraph',
@@ -150,7 +236,7 @@ export const info: Info = {
           name: 'Ingeniero Informático',
           startDate: 'Sep 2009',
           endDate: 'Ene 2015',
-          technologies: ['Java', 'J2EE', 'Swagger', 'JAX-RS'],
+          technologies: [technologies.java, technologies.j2ee, technologies.swagger, technologies.jaxrs],
           description: [
             {
               type: 'paragraph',
