@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jesusvallez.github.io',
+  site: 'https://jesusvallez.com/',
   integrations: [
     tailwind({
       applyBaseStyles: false,
