@@ -4,25 +4,36 @@ import Footer from '@/components/Footer.astro'
 import Header from '@/components/Header.astro'
 import Background from '@/components/Background.astro'
 
-import { info } from '@info'
+import { info as staticInfo } from '@info'
 
 import '@fontsource-variable/onest'
 import '@/styles/globals.css'
 
-const image = '/ogimage.png'
-const title = 'Curriculum Vitae'
-const description = `Actualmente estoy trabajando como ${info.jobDescription}. Aquí puedes encontrar toda mi trayectoria profesional, mi experiencia y mi formación académica.`
+const staticTitle = staticInfo.name
+const staticDescription = `Actualmente estoy trabajando como ${staticInfo.jobDescription}. Aquí puedes encontrar toda mi trayectoria profesional, mi experiencia y mi formación académica.`
+const baseUrl = 'https://jesusvallez.com'
+const staticOGImagePath = '/ogimage.png'
 
-const data = {
-  name: info.name,
-  baseUrl: 'https://jesusvallez.com',
+type Props = {
+  title?: string | null
+  description?: string | null
+  ogImagePath?: string | null
 }
+
+const { title, description, ogImagePath } = Astro.props
+
+const titleWithTemplate = [title, staticTitle].filter(Boolean).join(' | ')
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
-    <MetaHead title={title} description={description} ogImagePath={image} info={data} />
+    <MetaHead
+      title={titleWithTemplate}
+      description={description ?? staticDescription}
+      ogImagePath={ogImagePath ?? staticOGImagePath}
+      baseUrl={baseUrl}
+    />
   </head>
   <body
     class="h-my-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] items-start justify-items-center bg-neutral-900 text-white"

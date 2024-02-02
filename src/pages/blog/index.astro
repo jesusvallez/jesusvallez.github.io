@@ -20,20 +20,20 @@ if (!entries) {
 }
 ---
 
-<Layout>
+<Layout title="Blog">
   <Container class="mt-4 flex flex-col justify-center justify-items-center gap-x-8 gap-y-2">
-    <h1 class:list={['inline-block self-center text-h4 font-bold', 'md:text-h2 md:leading-tight']}>Blog</h1>
-    <h2 class:list={['mb-4 inline-block self-center text-pretty text-body1 opacity-60', 'md:text-h5 md:leading-tight']}>
+    <h1 class:list={['inline-block self-center text-h5 font-bold', 'md:text-h3 md:leading-tight']}>Blog</h1>
+    <h2 class:list={['inline-block self-center text-pretty text-body1 opacity-60', 'md:text-h5 md:leading-tight']}>
       Últimos artículos de Programación Frontend
     </h2>
 
-    <ul class="grid w-full grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-2 md:gap-6">
+    <ul class="my-4 grid w-full grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-4">
       {
         entries &&
           entries.map((e) => (
             <li>
               <a href={`/blog/${e.url}`}>
-                <Card clickable="yes">
+                <Card clickable="yes" title={e.title}>
                   <img
                     alt="Art"
                     src={

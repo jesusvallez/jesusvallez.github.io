@@ -33,10 +33,10 @@ export interface Props extends HTMLAttributes<'div'>, VariantProps<typeof card> 
  * For Astro components, we recommend setting your defaultVariants within
  * Astro.props (which are `undefined` by default)
  */
-const { clickable, size, ...rest } = Astro.props
+const { title, clickable, size, ...rest } = Astro.props
 const classCard = card({ clickable, size, class: rest.class })
 ---
 
-<div class={classCard}>
+<div class={classCard} title={title}>
   <slot />
 </div>

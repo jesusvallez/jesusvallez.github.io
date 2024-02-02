@@ -32,9 +32,14 @@ export function EntryBlog({ data }: PropsWithChildren<Props>) {
 
   return (
     <>
-      <header className="flex w-full flex-col items-center justify-end gap-4">
-        <h1 className="inline-block w-full text-center text-h5 font-bold md:text-h3 md:leading-tight">{data.title}</h1>
-        <h2 className="mb-4 inline-block w-full text-center text-body1 opacity-60 md:text-h6 md:leading-tight">
+      <header className="flex w-full flex-col items-center justify-end gap-2">
+        {/* <h1 className="inline-block w-full text-center text-h5 font-bold md:text-h3 md:leading-tight"></h1> */}
+
+        <h1 className="inline-block self-center text-center text-h5 font-bold md:text-h3 md:leading-tight">
+          {data.title}
+        </h1>
+
+        <h2 className="inline-block w-full text-center text-body1 opacity-60 md:text-h6 md:leading-tight">
           {data.description}
         </h2>
 
@@ -42,7 +47,7 @@ export function EntryBlog({ data }: PropsWithChildren<Props>) {
           <img
             src={data.image.url}
             alt={data.image.fileName}
-            className="mask-my-image mb-4 aspect-[5/2] rounded-sm object-cover sm:w-full"
+            className="mask-my-image my-4 aspect-[5/2] rounded-sm object-cover sm:w-full"
           />
         )}
       </header>
