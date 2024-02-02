@@ -32,10 +32,11 @@ export function EntryBlog({ data }: PropsWithChildren<Props>) {
 
   return (
     <>
-      <header className="flex w-full flex-col items-center justify-end">
-        <h1 className="mb-6 inline-block w-full text-center text-h5 font-bold md:text-h3 md:leading-tight">
-          {data.title}
-        </h1>
+      <header className="flex w-full flex-col items-center justify-end gap-4">
+        <h1 className="inline-block w-full text-center text-h5 font-bold md:text-h3 md:leading-tight">{data.title}</h1>
+        <h2 className="mb-4 inline-block w-full text-center text-body1 opacity-60 md:text-h6 md:leading-tight">
+          {data.description}
+        </h2>
 
         {data.image && (
           <img

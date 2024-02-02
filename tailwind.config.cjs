@@ -107,8 +107,8 @@ module.exports = {
           height: ['100vh', '100dvh'],
         },
         '.mask-my-image': {
-          WebkitMaskImage: 'linear-gradient(black 80%, transparent 100%)',
-          maskImage: 'linear-gradient(black 80%, transparent 100%);',
+          WebkitMaskImage: 'linear-gradient(black 80%, transparent 95%)',
+          maskImage: 'linear-gradient(black 80%, transparent 95%);',
         },
       })
     }),

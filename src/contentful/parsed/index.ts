@@ -95,6 +95,7 @@ async function getBlogEntry({
         url: fields.url,
         title: fields.title,
         body: fields.body,
+        description: fields.description,
         image: fields.image?.sys.type === 'Asset' && fields.image.fields.file ? fields.image.fields.file : null,
         tags: fields.tags || [],
       }

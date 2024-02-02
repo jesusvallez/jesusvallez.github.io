@@ -16,6 +16,7 @@ interface BlogEntry {
   createdAt: EntitySys['createdAt']
   url: string
   title: string | null
+  description: string | null
   body: Document
   image?: AssetFile | null
   tags?: string[] | null
