@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm exec rimraf dist && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
@@ -19,7 +19,7 @@
     "@fontsource-variable/onest": "5.0.2",
     "@radix-ui/react-slot": "1.0.2",
     "@radix-ui/react-toast": "1.1.5",
-    "astro": "4.2.4",
+    "astro": "4.2.6",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
     "contentful": "10.6.19",
@@ -50,6 +50,7 @@
     "prettier": "3.2.4",
     "prettier-plugin-astro": "0.13.0",
     "prettier-plugin-tailwindcss": "0.5.11",
+    "rimraf": "5.0.5",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
   }
