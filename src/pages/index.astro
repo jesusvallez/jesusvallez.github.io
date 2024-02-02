@@ -2,11 +2,11 @@
 import Layout from '@/layouts/Layout.astro'
 import Experience from '@/components/Experience.astro'
 import SocialMedia from '@/components/SocialMedia.astro'
-
-import { info } from '../data/info'
 import Code from '@/components/icons/Code.astro'
 import School from '@/components/icons/School.astro'
 import Container from '@/components/Container.astro'
+
+import { info } from '@info'
 
 const { name, aboutMeShort, professionalExp, academicExp } = info
 const jobDescription = professionalExp[0].job[0].name
@@ -14,7 +14,7 @@ const jobCompany = professionalExp[0].name
 ---
 
 <Layout>
-  <Container class="flex flex-col items-start justify-center gap-8 lg:flex-row">
+  <Container class="mt-2 flex flex-col items-start justify-center gap-6 lg:flex-row">
     <aside class="flex shrink grow-0 basis-6/12 flex-col gap-4">
       <img
         class:list={['h-32 w-32 rounded-full border-2 border-neutral-700 object-cover', 'md:size-40', 'lg:size-52']}
@@ -50,7 +50,7 @@ const jobCompany = professionalExp[0].name
       </p>
       <SocialMedia items={info.socialMedia} />
     </aside>
-    <div class="flex w-full max-w-6xl shrink grow-0 basis-6/12 flex-col items-start justify-between gap-8">
+    <div class="flex w-full shrink grow-0 basis-6/12 flex-col items-start justify-between gap-8">
       {
         professionalExp.length > 0 && (
           <Experience name="Experiencia Profesional" job={professionalExp}>

@@ -1,11 +1,14 @@
 ---
 import SocialMediaFooter from './SocialMediaFooter.astro'
+import { container } from '@/components/Container.astro'
 import { info } from '../data/info'
+
+const className = container({
+  class: 'mx-auto flex flex-col-reverse items-center justify-between gap-4 pb-4 pt-12 md:flex-row',
+})
 ---
 
-<footer
-  class="mx-auto flex w-full max-w-6xl flex-col-reverse items-center justify-between gap-4 px-6 pb-4 pt-12 md:flex-row md:px-4"
->
+<footer class={className}>
   <a
     class="text-caption hover:underline md:text-body2"
     target="_blank"
@@ -15,7 +18,7 @@ import { info } from '../data/info'
   >
     Creado con mucho{' '}
     <span data-testid="emoji" role="img" aria-label="corazón blanco">♥</span>{' '}
-     por Jesús Vállez Gomis
+    por Jesús Vállez Gomis
   </a>
 
   <SocialMediaFooter items={info.socialMedia} />

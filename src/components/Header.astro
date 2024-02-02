@@ -1,9 +1,13 @@
 ---
+import { container } from '@/components/Container.astro'
+
 const info = new URL(Astro.request.url)
 const pathname = `/${info.pathname.split('/').filter(Boolean).join('/')}`
+
+const className = container({ class: 'mx-auto flex flex-row items-center justify-between py-4' })
 ---
 
-<header class="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-6 pb-2 pt-4 md:px-4">
+<header class={className}>
   <div class="flex w-full items-center justify-between">
     <a class="block text-white" href="/">
       <span class="sr-only">Inicio</span>

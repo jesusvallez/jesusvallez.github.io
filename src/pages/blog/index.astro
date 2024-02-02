@@ -21,10 +21,13 @@ if (!entries) {
 ---
 
 <Layout>
-  <Container class="flex flex-col justify-center justify-items-center gap-x-8 gap-y-4">
+  <Container class="mt-4 flex flex-col justify-center justify-items-center gap-x-8 gap-y-2">
     <h1 class:list={['inline-block self-center text-h4 font-bold', 'md:text-h2 md:leading-tight']}>Blog</h1>
+    <h2 class:list={['mb-4 inline-block self-center text-pretty text-body1 opacity-60', 'md:text-h5 md:leading-tight']}>
+      Últimos artículos de Programación Frontend
+    </h2>
 
-    <ul class="grid w-full grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-8">
+    <ul class="grid w-full grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-2 md:gap-6">
       {
         entries &&
           entries.map((e) => (
