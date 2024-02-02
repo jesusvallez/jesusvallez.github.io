@@ -1,4 +1,7 @@
 ---
+const IS_PROD = import.meta.env.PROD
+const UMAMI_ID = '4f591a21-f27b-46da-940f-65a39edec4f8'
+
 type Props = {
   title: string
   description: string
@@ -7,15 +10,13 @@ type Props = {
 }
 
 const { title, description, ogImagePath, baseUrl } = Astro.props
-const IS_PROD = import.meta.env.PROD
-const WEBSITE_ID = '4f591a21-f27b-46da-940f-65a39edec4f8'
 ---
 
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-{IS_PROD && <script async src="https://analytics.eu.umami.is/script.js" data-website-id={WEBSITE_ID} />}
-<link rel="sitemap" href={`${baseUrl}/sitemap-index.xml`} />
+{IS_PROD && <script async src="https://analytics.eu.umami.is/script.js" data-website-id={UMAMI_ID} />}
+<link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
