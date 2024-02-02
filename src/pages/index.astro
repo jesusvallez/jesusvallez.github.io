@@ -16,13 +16,16 @@ const jobCompany = professionalExp[0].name
 <Layout title="Porfolio">
   <Container class="mt-2 flex flex-col items-start justify-center gap-6 lg:flex-row">
     <aside class="flex shrink grow-0 basis-6/12 flex-col gap-4">
-      <img
-        class:list={['h-32 w-32 rounded-full border-2 border-neutral-700 object-cover', 'md:size-40', 'lg:size-52']}
-        src="/profile.png"
-        alt="Imagen de Jesús Vállez"
-        width="740"
-        height="420"
-      />
+      <picture>
+        <source srcset="/profile.webp" type="image/webp" />
+        <img
+          class:list={['h-32 w-32 rounded-full border-2 border-neutral-700 object-cover', 'md:size-40', 'lg:size-52']}
+          src="/profile.png"
+          alt="Imagen de Jesús Vállez"
+          width="740"
+          height="420"
+        />
+      </picture>
 
       <p class="text-body1">
         ¡Hey! <span data-testid="emoji" role="img" aria-label="Mano saludando">👋🏻</span>, mi nombre es
