@@ -1,8 +1,21 @@
-<a
-  class="flex items-center justify-center gap-x-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs transition hover:scale-110 hover:bg-white/20 md:px-6 md:py-2 md:text-base"
+<!-- <a
+  class:list={[
+    'flex items-center justify-center gap-x-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs transition hover:scale-110 hover:bg-white/20 md:px-6 md:py-2 md:text-base',
+  ]}
   {...Astro.props}
   target="_blank"
   rel="noopener noreferrer"
 >
-  <slot />
+  
+</a> -->
+<a class="relative">
+  <div
+    class="absolute inset-2 rounded-full bg-gradient-to-r from-my-primary via-my-secondary to-my-tertiary opacity-60 blur-xl"
+  >
+  </div>
+  <div
+    class="relative flex cursor-pointer items-center justify-center gap-x-2 rounded-full border border-white/10 bg-neutral-800 px-3 py-1 text-xs transition hover:scale-105 hover:bg-neutral-700 md:px-4 md:py-2 md:text-base"
+  >
+    <slot />
+  </div>
 </a>

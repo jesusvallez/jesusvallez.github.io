@@ -75,11 +75,18 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
+        text: {
+          to: {
+            backgroundPosition: '200% center',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'text-gradient': 'text 1.5s linear infinite',
       },
+
       fontSize: {
         h1: '4.5rem',
         h2: '3.5rem',
