@@ -14,9 +14,7 @@ const { name, job } = Astro.props
 <section class="mx-auto w-full">
   <div class="flex flex-row items-center gap-2">
     <slot name="icon" />
-    <h2
-      class="inline bg-gradient-to-bl from-my-tertiary to-my-tertiary bg-[length:90%_35%] bg-bottom bg-no-repeat text-h6 font-extrabold uppercase"
-    >
+    <h2 class="text-h6 font-extrabold uppercase underline decoration-my-tertiary decoration-[5px] underline-offset-2">
       {name}
     </h2>
   </div>
@@ -26,7 +24,7 @@ const { name, job } = Astro.props
       job.map((work) => (
         <Card class="flex flex-col items-start gap-1">
           <div>
-            <h3 class="inline bg-gradient-to-bl from-my-secondary to-my-secondary bg-[length:90%_18%] bg-bottom bg-no-repeat text-h5 font-extrabold">
+            <h3 class="text-h5 font-extrabold underline decoration-my-secondary decoration-[4px] underline-offset-2">
               {work.name}
             </h3>
           </div>
