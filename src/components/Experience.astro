@@ -32,7 +32,7 @@ const { name, job } = Astro.props
           <p class="mb-2 inline text-caption font-medium text-my-primary">{work.location}</p>
           <ul class="w-full space-y-6">
             {work.job.map(({ name, description, startDate, endDate, technologies, link }) => (
-              <li>
+              <li class:list={[{ 'group cursor-pointer': link }]}>
                 <div class="mb-2 flex flex-col justify-between md:flex-row md:items-center">
                   <h4 class="text-h6 font-bold">
                     {link ? (
@@ -40,9 +40,10 @@ const { name, job } = Astro.props
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="flex items-center gap-1 leading-none text-white transition hover:text-gray-500/90 hover:underline"
+                        class="flex items-center gap-1 leading-none text-white transition group-hover:text-gray-400/50 group-hover:underline"
                       >
-                        <Link class="motion-safe:animate-pulse-fade-in size-6 flex-shrink-0" /> {name}
+                        <Link class="motion-safe:animate-pulse-fade-in size-6 flex-shrink-0" />
+                        {name}
                       </a>
                     ) : (
                       name
