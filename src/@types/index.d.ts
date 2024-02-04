@@ -25,6 +25,7 @@ export interface Job {
   name: string
   startDate: string
   endDate: string
+  link?: string
   description: Array<DescriptionJob | ListJob>
   technologies: string[]
 }

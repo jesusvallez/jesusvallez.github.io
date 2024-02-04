@@ -55,6 +55,7 @@ export const info: Info = {
           name: 'Senior Frontend Developer',
           startDate: 'Oct 2021',
           endDate: 'Presente',
+          link: 'https://www.pepephone.com/',
           technologies: [
             technologies.nextjs14,
             technologies.react,
@@ -69,7 +70,7 @@ export const info: Info = {
             {
               type: 'paragraph',
               text: [
-                'Ayudo a mejorar la web comercial desde un punto de vista técnico, garantizando un mejor funcionamiento a nivel de performace. También gestiono el frontend de un proyecto interno.',
+                'Ayudo a mejorar la web comercial de pepephone.com desde un punto de vista técnico, garantizando un mejor funcionamiento a nivel de performace. También gestiono el frontend de un proyecto interno.',
               ],
             },
           ],
@@ -78,6 +79,7 @@ export const info: Info = {
           name: 'Senior Frontend Developer',
           startDate: 'Jul 2019',
           endDate: 'Sep 2021',
+          link: 'https://www.yoigo.com/',
           technologies: [
             technologies.angular9,
             technologies.nextjs11,
@@ -108,6 +110,7 @@ export const info: Info = {
           name: 'Frontend Developer',
           startDate: 'May 2018',
           endDate: 'Jun 2019',
+          link: 'https://www.bmaker.es/',
           technologies: [
             technologies.angular7,
             technologies.typescript,
@@ -134,6 +137,7 @@ export const info: Info = {
           name: 'PHP Developer',
           startDate: 'Ago 2017',
           endDate: 'Abr 2018',
+          link: 'https://www.lowpost.com/',
           technologies: [
             technologies.symfony,
             technologies.drupal,
@@ -144,7 +148,6 @@ export const info: Info = {
             technologies.rabbitmq,
             technologies.elasticsearch,
           ],
-
           description: [
             {
               type: 'paragraph',

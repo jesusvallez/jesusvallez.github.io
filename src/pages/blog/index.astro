@@ -23,7 +23,7 @@ if (!entries) {
 <Layout title="Blog">
   <Container class="mt-4 flex flex-col justify-center justify-items-center gap-x-8 gap-y-2">
     <h1 class:list={['inline-block self-center text-h5 font-bold', 'md:text-h3 md:leading-tight']}>Blog</h1>
-    <h2 class:list={['inline-block self-center text-pretty text-body1 opacity-60', 'md:text-h5 md:leading-tight']}>
+    <h2 class:list={['inline-block self-center text-balance text-body1 opacity-60', 'md:text-h5 md:leading-tight']}>
       Últimos artículos de Programación Frontend
     </h2>
 
@@ -44,7 +44,7 @@ if (!entries) {
                   />
 
                   <h3 class="mb-1 line-clamp-1 w-auto text-h6 font-extrabold">{e.title}</h3>
-                  <p class="line-clamp-4 text-pretty text-body2" set:html={e.description} />
+                  <p class="line-clamp-4 text-balance text-body2" set:html={e.description} />
                 </Card>
               </a>
             </li>

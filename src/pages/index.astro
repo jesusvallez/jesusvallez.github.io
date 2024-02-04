@@ -8,7 +8,7 @@ import Container from '@/components/Container.astro'
 
 import { info } from '@info'
 
-const { name, aboutMeShort, professionalExp, academicExp } = info
+const { name, professionalExp, academicExp } = info
 const jobDescription = professionalExp[0].job[0].name
 const jobCompany = professionalExp[0].name
 ---
@@ -41,14 +41,14 @@ const jobCompany = professionalExp[0].name
       </h1>
       <h2
         class:list={[
-          'mx-0 text-pretty',
+          'mx-0 text-balance',
           'inline text-h6 font-bold leading-tight sm:block',
           'md:text-h5 md:leading-tight',
         ]}
       >
         Actualmente trabajo como {jobDescription} en {jobCompany}
       </h2>
-      <p class="max-w-3xl text-pretty text-body1">
+      <p class="max-w-3xl text-balance text-body1">
         <span class="text-my-primary">+10 años de experiencia.</span> Crear experiencias digitales define mi profesión y
         hobby.
         <span class="text-my-secondary">Trato de ir siempre más allá</span> involucrandome en el análisis, diseño e implementación

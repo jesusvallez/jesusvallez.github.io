@@ -2,6 +2,7 @@
 import type { Experience } from '../@types'
 import Card from './Card.astro'
 import ExperienceItem from './ExperienceItem.astro'
+import Link from './icons/Link.astro'
 
 interface Props {
   name: string
@@ -30,19 +31,32 @@ const { name, job } = Astro.props
           </div>
           <p class="mb-2 inline text-caption font-medium text-my-primary">{work.location}</p>
           <ul class="w-full space-y-6">
-            {work.job.map((workspace) => (
+            {work.job.map(({ name, description, startDate, endDate, technologies, link }) => (
               <li>
                 <div class="mb-2 flex flex-col justify-between md:flex-row md:items-center">
-                  <h4 class="text-h6 font-bold">{workspace.name}</h4>
+                  <h4 class="text-h6 font-bold">
+                    {link ? (
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-1 leading-none transition duration-300 hover:text-my-primary hover:underline"
+                      >
+                        <Link class="motion-safe:animate-pulse-fade-in size-6 flex-shrink-0" /> {name}
+                      </a>
+                    ) : (
+                      name
+                    )}
+                  </h4>
                   <p class="text-body2 font-medium text-neutral-400">
-                    {workspace.startDate} - {workspace.endDate}
+                    {startDate} - {endDate}
                   </p>
                 </div>
 
-                <ExperienceItem description={workspace.description} />
+                <ExperienceItem description={description} />
 
                 <ul class="flex flex-row flex-wrap gap-2 pt-4">
-                  {workspace.technologies.map((tech) => (
+                  {technologies.map((tech) => (
                     <li class="whitespace-nowrap rounded-full bg-[#323232] px-2 py-1 text-xs text-white">{tech}</li>
                   ))}
                 </ul>

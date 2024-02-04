@@ -80,11 +80,26 @@ module.exports = {
             backgroundPosition: '200% center',
           },
         },
+        'pulse-fade-in': {
+          '0%': {
+            transform: 'scale(1)',
+          },
+          '10%': {
+            transform: 'scale(0.8)',
+          },
+          '20%': {
+            transform: 'scale(1.08)',
+          },
+          '30%': {
+            transform: 'scale(1)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'text-gradient': 'text 1.5s linear infinite',
+        'pulse-fade-in': 'pulse-fade-in 4s ease-out infinite',
       },
 
       fontSize: {
