@@ -99,7 +99,7 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'text-gradient': 'text 1.5s linear infinite',
-        'pulse-fade-in': 'pulse-fade-in 4s ease-out infinite',
+        'pulse-fade-in': 'pulse-fade-in 2.5s ease-out infinite',
       },
 
       fontSize: {
