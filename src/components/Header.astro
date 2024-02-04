@@ -26,7 +26,7 @@ const className = container({ class: 'mx-auto flex flex-row items-center justify
         <a
           href="/"
           title="Ir a la página de inicio"
-          class:list={['text-white transition hover:text-gray-500/75', { underline: pathname === '/' }]}
+          class:list={['text-white transition hover:text-gray-400/50', { underline: pathname === '/' }]}
         >
           Inicio
         </a>
@@ -36,7 +36,7 @@ const className = container({ class: 'mx-auto flex flex-row items-center justify
         <a
           href="/blog"
           title="Ir al blog"
-          class:list={['text-white transition hover:text-gray-500/75', { underline: pathname.startsWith('/blog') }]}
+          class:list={['text-white transition hover:text-gray-400/50', { underline: pathname.startsWith('/blog') }]}
         >
           Blog
         </a>
