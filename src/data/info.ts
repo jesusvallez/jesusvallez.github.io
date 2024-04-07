@@ -244,7 +244,6 @@ export const info: Info = {
             {
               type: 'paragraph',
               text: [
-                'Nota del proyecto: 9',
                 'Servicio WEB REST destinado a la integración de información de un CRM. Desarrollada sobre la tecnología J2EE, anotaciones Java JAX-RS y Swagger UI para la documentación.',
               ],
             },
@@ -254,8 +253,8 @@ export const info: Info = {
     },
   ],
   socialMedia: {
-    github: 'https://github.com/jesusvallez',
     linkedin: 'https://www.linkedin.com/in/jesusvallez',
+    github: 'https://github.com/jesusvallez',
   },
   projects: [],
 }

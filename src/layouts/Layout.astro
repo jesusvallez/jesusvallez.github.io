@@ -7,7 +7,7 @@ import SpeedInsights from '@vercel/speed-insights/astro'
 
 import { info as staticInfo } from '@info'
 
-import '@fontsource-variable/onest'
+import onest from '@fontsource-variable/onest/files/onest-latin-wght-normal.woff2'
 import '@/styles/globals.css'
 
 const staticTitle = staticInfo.name
@@ -29,6 +29,7 @@ const titleWithTemplate = [title, staticTitle].filter(Boolean).join(' | ')
 <!doctype html>
 <html lang="es">
   <head>
+    <link rel="preload" as="font" href={onest} type="font/woff2" />
     <MetaHead
       title={titleWithTemplate}
       description={description ?? staticDescription}
