@@ -38,7 +38,6 @@ export interface Experience {
 
 export interface Info {
   name: string
-  jobDescription: string
   aboutMeShort: string
   aboutMe: string[]
   professionalExp: Experience[]
