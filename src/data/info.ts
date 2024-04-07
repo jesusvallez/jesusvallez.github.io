@@ -38,7 +38,6 @@ enum technologies {
 
 export const info: Info = {
   name: 'Jesús Vállez Gomis',
-  jobDescription: 'Senior Frontend Developer',
   aboutMeShort:
     '+10 años de experiencia. Crear experiencias digitales define mi profesión y hobby. Trato de ir más allá involucrandome en el análisis, diseño e implementación con visión crítica.',
   aboutMe: [

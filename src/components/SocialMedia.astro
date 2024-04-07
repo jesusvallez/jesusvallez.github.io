@@ -4,6 +4,7 @@ import Linkedin from '@/components/icons/Linkedin.astro'
 
 import { type SocialMedia } from '../@types'
 import SocialPill from './SocialPill.astro'
+import CreatePDF from './pdf/CreatePDF'
 
 interface Props {
   items: SocialMedia
@@ -35,4 +36,6 @@ const { items } = Astro.props
       }
     })
   }
+
+  <CreatePDF client:load />
 </div>
