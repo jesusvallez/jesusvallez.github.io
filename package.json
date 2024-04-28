@@ -12,6 +12,7 @@
     "contentful:generate-models": "npx ts-node ./scripts/generate-models.ts"
   },
   "dependencies": {
+    "@astrojs/partytown": "2.1.0",
     "@astrojs/react": "3.3.1",
     "@astrojs/sitemap": "3.1.4",
     "@astrojs/tailwind": "5.1.0",
@@ -20,6 +21,7 @@
     "@radix-ui/react-slot": "1.0.2",
     "@radix-ui/react-toast": "1.1.5",
     "astro": "4.7.0",
+    "astrojs-service-worker": "2.0.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "contentful": "10.8.10",
