@@ -3,7 +3,6 @@ import MetaHead from '@/components/MetaHead.astro'
 import Footer from '@/components/Footer.astro'
 import Header from '@/components/Header.astro'
 import Background from '@/components/Background.astro'
-import SpeedInsights from '@vercel/speed-insights/astro'
 
 import { info as staticInfo } from '@info'
 
@@ -44,6 +43,5 @@ const titleWithTemplate = [title, staticTitle].filter(Boolean).join(' | ')
     <Header />
     <slot />
     <Footer />
-    <SpeedInsights />
   </body>
 </html>
