@@ -2,7 +2,7 @@ import { type PropsWithChildren } from 'react'
 
 import type { BlogEntry } from '@/contentful/parsed/models'
 import { documentToReactComponents, type Options } from '@contentful/rich-text-react-renderer'
-import richTextTypes from '@contentful/rich-text-types'
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import { isHyperlinkNode, isParagraphNode } from '@/contentful/helpers'
 
 import CodeEntry from './CodeEntry'
@@ -16,13 +16,13 @@ interface Props {
 
 const options: Options = {
   renderMark: {
-    [richTextTypes.MARKS.BOLD]: (text) => <StrongEntry>{text}</StrongEntry>,
-    [richTextTypes.MARKS.CODE]: (text) => <CodeEntry>{text}</CodeEntry>,
+    [MARKS.BOLD]: (text) => <StrongEntry>{text}</StrongEntry>,
+    [MARKS.CODE]: (text) => <CodeEntry>{text}</CodeEntry>,
   },
   renderNode: {
-    [richTextTypes.BLOCKS.PARAGRAPH]: (node, next) =>
+    [BLOCKS.PARAGRAPH]: (node, next) =>
       isParagraphNode(node) && <ParagraphEntry node={node}>{next}</ParagraphEntry>,
-    [richTextTypes.INLINES.HYPERLINK]: (node, next) =>
+    [INLINES.HYPERLINK]: (node, next) =>
       isHyperlinkNode(node) && <HyperlinkEntry node={node}>{next}</HyperlinkEntry>,
   },
 }

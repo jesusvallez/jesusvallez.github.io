@@ -1,6 +1,6 @@
 import contentful from 'contentful'
 
-import { type TypeBlogPageSkeleton } from '../models/index.ts'
+import { type TypeBlogPageSkeleton } from '../models/index'
 
 import { contentfulConfig, CONTENTFUL_MODE } from '../config'
 import type { BlogEntries, BlogEntry } from './models.ts'
