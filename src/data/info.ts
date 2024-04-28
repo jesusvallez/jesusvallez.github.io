@@ -12,6 +12,7 @@ enum technologies {
   j2ee = 'J2EE',
   java = 'Java',
   jaxrs = 'JAX-RS',
+  jenkins = 'Jenkins',
   jest = 'Jest',
   karma = 'Karma',
   lerna = 'Lerna',
@@ -65,6 +66,8 @@ export const info: Info = {
             technologies.jest,
             technologies.playwrigth,
             technologies.storybook,
+            technologies.redis,
+            technologies.jenkins,
           ],
           description: [
             {
@@ -90,6 +93,8 @@ export const info: Info = {
             technologies.jest,
             technologies.karma,
             technologies.cypress,
+            technologies.redis,
+            technologies.jenkins,
           ],
           description: [
             {
