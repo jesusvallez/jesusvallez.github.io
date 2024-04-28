@@ -16,7 +16,7 @@ const { title, description, ogImagePath, baseUrl } = Astro.props
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-{IS_PROD && <script type="text/partytown" src="https://analytics.eu.umami.is/script.js" data-website-id={UMAMI_ID} />}
+{IS_PROD && <script src="https://analytics.eu.umami.is/script.js" data-website-id={UMAMI_ID} />}
 
 <!-- <link rel="preload" href={'https://cdn.lavelada.dev/fonts/font-atomic.woff2'} as="font" type="font/woff2" crossorigin /> -->
 
