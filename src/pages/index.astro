@@ -9,8 +9,8 @@ import Container from '@/components/Container.astro'
 import { info } from '@info'
 
 const { name, professionalExp, academicExp } = info
-const jobDescription = professionalExp[0].job[0].name
-const jobCompany = professionalExp[0].name
+const jobDescription = professionalExp.at(0)?.job.at(0)?.name
+const jobCompany = professionalExp.at(0)?.name
 ---
 
 <Layout title="Porfolio">
